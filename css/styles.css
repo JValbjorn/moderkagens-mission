@@ -5,11 +5,40 @@
 }
 
 .home-btn {
-    padding: 1rem;
+    width: 15%;
+    height: 5%;
     background-color: #047381;
-    border-color: #014555;
-    border-width: 3rem;
-    
+    border: 5px solid #014555;
+    border-radius: 0 0 150% 0;
+}
+
+.home {
+   height: 5em; 
+   width: auto;
+   margin: 1rem 6rem 3rem 1rem;
+}
+
+.timer-cornor {
+    width: 15%;
+    height: 5%;
+    background-color: #047381;
+    border: 5px solid #014555;
+    border-radius: 0 0 0 150% ;
 }
  
+.timer {
+    height: 2.36em; 
+    width: auto;
+    margin: 1rem 1rem 1rem 1rem ;
+    
+    color: white;
+    font-size: 3rem;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
 
