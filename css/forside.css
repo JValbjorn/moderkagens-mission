@@ -1,4 +1,54 @@
 body {
-    background-image:url(../media/img/backgrunds/Blurry_background-01.jpg);
+    background-image:url(../media/img/backgrunds/blurry-background-01.jpg);
     background-repeat: no-repeat;
+    background-size:cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.logo {
+    margin-left: 12%;
+    margin-right: auto;
+    margin-top: 6rem;
+    
+    width: 75%;
+    height: auto;
+}
+
+.mom {
+    margin: 3% 21%;
+
+    position: absolute;
+    display: inline-block;
+    
+    width:60%;
+    height: auto;
+
+}
+
+
+.scanner-screen {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    
+    position: absolute;
+    z-index: 10;
+    top: 64%;
+    left: 32.5%;
+    
+}
+
+.front-btns {
+    background-color: #34719D;
+    padding: 2rem 1.5rem;
+
+    border-radius: 50% 5%;
+    text-align: center;
+}
+
+ a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.5rem;
 }
