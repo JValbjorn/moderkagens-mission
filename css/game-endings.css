@@ -1,10 +1,21 @@
 body {
-    background-image:url(../media/img/backgrunds/baggrund-spil-01.png);
+    background-image:url(../media/img/backgrunds/birth-room.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    
+}
+
+.overskrifter{
+    margin: 10vh 0 5vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .baby-scores{
     display: flex;
+    margin-bottom: 10vh;
 }
 .baby-face {
 width: 50vw;
@@ -12,19 +23,16 @@ width: 50vw;
 object-fit: none; */
 }
 
-.baby-face img {
-    width: 20%;
+.baby-face img {    
+    padding-left: 20%;
+    width: 100%;
     height: auto;
-    object-fit: none;
+
 }
 
 .scores{
     display: flex;
     flex-direction: column;
-}
-.resultater{
-    display: flex;
-    flex-direction: row;
     
 }
 .resultater img{
@@ -33,8 +41,41 @@ object-fit: none; */
     
 }
 
+.prog-doughnuts{
+border-right: solid #fff 0.1rem;
+margin-right: 1rem; 
+}
+.resultater{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1.5rem;
+    
+    
+}
 
-div img{
+
+.ikon-tekst{
+    border-bottom: solid #fff 0.1rem;
+   
+}
+.ikon-tekst img{
    position: relative;
     left: 80%;
+}
+
+.bundtekst{
+    text-align: center;
+    margin: 0 5rem 3rem 5rem;
+    border-bottom: solid #fff 0.1rem;
+    
+}
+
+.videre-knap{
+    position: relative;
+    left: 80%;
+}
+
+.videre-knap img{
+    width: 10%;
+    margin-bottom: 2rem;
 }
