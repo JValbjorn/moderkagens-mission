@@ -1,0 +1,40 @@
+body {
+    background-image:url(../media/img/backgrunds/baggrund-spil-01.png);
+    background-repeat: no-repeat;
+}
+
+.baby-scores{
+    display: flex;
+}
+.baby-face {
+width: 50vw;
+/* height: auto;
+object-fit: none; */
+}
+
+.baby-face img {
+    width: 20%;
+    height: auto;
+    object-fit: none;
+}
+
+.scores{
+    display: flex;
+    flex-direction: column;
+}
+.resultater{
+    display: flex;
+    flex-direction: row;
+    
+}
+.resultater img{
+    width: 20%;
+
+    
+}
+
+
+div img{
+   position: relative;
+    left: 80%;
+}
