@@ -1,4 +1,5 @@
 body {
     background-image:url(../media/img/backgrunds/baggrund-spil-01.png);
     background-repeat: no-repeat;
+    background-size: cover;
 }
