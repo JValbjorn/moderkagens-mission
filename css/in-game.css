@@ -3,3 +3,34 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.timer-cornor {
+    width: 15%;
+    height: 10%;
+    background-color: #047381;
+    border: 5px solid #014555;
+    border-radius: 0 0 0 150% ;
+    /* box-shadow: 10px 10px 5px #rgba(0, 0, 0, 0.6); */
+
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;  
+}
+ 
+.timer {
+    height: 2.36em; 
+    width: auto;
+    margin: 1rem 1rem 1rem 1rem ;
+    
+    color: white;
+    font-size: 3rem;
+}
+
+.baby-game {
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 120%;
+    height: 30rem;
+    width: auto;
+}
