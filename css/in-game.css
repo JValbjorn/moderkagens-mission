@@ -5,8 +5,8 @@ body {
 }
 
 .timer-cornor {
-    width: 15%;
-    height: 10%;
+    width: 17%;
+    height: 12%;
     background-color: #047381;
     border: 5px solid #014555;
     border-radius: 0 0 0 150% ;
@@ -21,15 +21,16 @@ body {
 .timer {
     height: 2.36em; 
     width: auto;
-    margin: 1rem 1rem 1rem 1rem ;
+    margin: 2rem 3rem; 
+    margin-right: -9rem; 
     
     color: white;
     font-size: 3rem;
 }
 
 .baby-game {
-    margin-left: 50%;
-    margin-right: 50%;
+    margin-left: 20%;
+    margin-right: auto;
     margin-top: 120%;
     height: 30rem;
     width: auto;
