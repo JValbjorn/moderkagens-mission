@@ -2,12 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
-    max-width: 4000px;
-    max-height: 1412px;
+    /* max-width: 4000px;
+    max-height: 3612px; */
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -28,7 +27,6 @@ body {
    height: 5em; 
    width: auto;
    margin: 1rem 6rem 3rem 1rem;
-
 }
 
 .blue-cornors {
@@ -42,6 +40,5 @@ body {
 
     position: absolute;
     display: inline-block;
-
 }
 
