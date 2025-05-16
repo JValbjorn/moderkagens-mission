@@ -31,7 +31,7 @@ p {
 .home {
     height: 5em; 
     width: auto;
-    
+    margin: 1rem 0 0 0;
  }
 
  .home-btn {
@@ -122,12 +122,15 @@ width: auto;
     margin: 0 5rem 3rem 5rem;
     border-bottom: solid #fff 0.3rem;
     padding-bottom: 3px;
+    margin-bottom: 6rem;
 }
+
 
 h3 {
     text-align: center;
     font-size: 2rem;
 }
+   
 
 .videre-knap{
     position: relative;
