@@ -9,6 +9,7 @@ body {
     max-height: 3612px; */
     overflow-x: hidden;
     overflow-y: hidden;
+    min-height:1600px;
 }
 
 .home-btn {
