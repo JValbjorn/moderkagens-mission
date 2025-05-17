@@ -4,7 +4,6 @@ body {
     background-size: cover;
     color: #fff;
     min-height:1600px;
-    
 }
 
 .overskrifter{
@@ -156,7 +155,5 @@ h3 {
     width: 23rem;
     padding: 1rem;
     text-align: center;
-    
-
     border-radius: 50px;
 }

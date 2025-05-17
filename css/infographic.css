@@ -1,31 +1,57 @@
 body {
-    background-image:url(../media/img/backgrunds/infografik-baggrund.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-height: 100vh;
-    max-width: 100vw;
+    background-image:url(../media/img/backgrunds/background-placenta.png);
+    background-repeat: no-repeat;    
+    background-size: contain;
+    background-position: center top;
+    top: 0;
+} 
+
+p {
+    font-size: 1.5rem;
 }
 
 .infograph-topics {
-    margin-top: 20%; 
+    
+    margin-top: 10%; 
     padding-left: 2rem;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    align-items: center;
 }
 
-/* .food {
+.infographic-content {
    
-    
+}
+
+.moderkage {
+    padding-top: 17rem;
+}
+
+.food {
+    padding-top: 9rem;
 }
 
 .waste {
-
+    padding-top: 3rem;
 }
-
-.virus {
-
-} */
 
 .home-btn {
     position: absolute;
     z-index: 10;
     top: 0;
+}
+
+.spil-btn {
+    font-size: 2.5rem;
+    background-color: #1cb7cd;
+    width: 13rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 50px;
+    
+    position: absolute;
+    right: 3rem;
+    bottom: 8rem;
 }
