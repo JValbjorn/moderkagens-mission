@@ -37,3 +37,26 @@ body {
     height: 38rem;
     width: auto;
 }
+
+.video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* This ensures the video covers the entire viewport */
+        }
+        
+        .main-content {
+            display: none; /* Hidden initially, will be shown after video ends */
+        }
