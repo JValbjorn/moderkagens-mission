@@ -1,22 +1,22 @@
 "use strict";
 
 let scoreArray = [
-    { type: "good-food", quantity: 0, worth: 10, total: 0 },
-    { type: "bad-food", quantity: 0, worth: 5, total: 0 },
+    { type: "good", quantity: 0, worth: 10, total: 0 },
+    { type: "bad", quantity: 0, worth: 5, total: 0 },
     { type: "waste", quantity: 0, worth: 10, total: 0 },
     { type: "virus", quantity: 0, worth: 10, total: 0 }
 ]
 
 // Gemmer kurvens indhold i localStorage
-function saveCartToLocalStorage() {
+function savePointsToLocalStorage() {
     localStorage.setItem('pointSystem', JSON.stringify(scoreArray));
 }
 
 // Henter kurvens indhold fra localStorage ved sideindlæsning
-function loadCartFromLocalStorage() {
-    const storedCart = localStorage.getItem('pointSystem');
+function loadPointsFromLocalStorage() {
+    const storedPoints = localStorage.getItem('pointSystem');
     if (storedPoints) {
-        cart = JSON.parse(storedPoints); // Konverterer string til array
+        scoreArray = JSON.parse(storedPoints); // Konverterer string til array
         updateUIFromCart(); // Opdaterer UI med hentede data
     }
 }
@@ -26,34 +26,33 @@ function loadCartFromLocalStorage() {
 function updateUIFromCart() {
     scoreArray.forEach(micro => {
         let antalIndi = document.getElementById(micro.type);
-        let vaerdIndi = document.getElementById(micro.type + "-total");
+        // let vaerdIndi = document.getElementById(micro.type + "-total");
 
         if (antalIndi && vaerdIndi) {
-            antalIndi.value = bajer.quantity;
-            vaerdIndi.value = bajer.total; // Rettelse: Bruger bajer.total
+            antalIndi.value = micro.quantity;
+            vaerdIndi.value = micro.total; // Rettelse: Bruger bajer.total
         }
     });
-    //Disse er til for at at input-felterne "total/samlet...Price()" er opdateret,
-    //når man går væk fra checkout siden og siden hen kommer tilbage igen
-    samletHyldeblomstPrice();
-    samletCitronPrice();
-    samletIngefaerPrice();
-    samletClassicPrice();
-    samletLakridsPrice();
-    
-    totalPrice();
+   
     console.log("updateUI");
 }
 
 
+function resetPointSystem() {
+    scoreArray.forEach(micro => {
+        micro.quantity = 0;
+        micro.total = 0;
+        
+    }); 
+    console.log("PointSystem reset");
+    savePointsToLocalStorage();
+    updateUIFromCart();
+}
+
 
 // Loader data fra localStorage ved opstart
-window.onload = function () {
-    loadCartFromLocalStorage();
+window.addEventListener('DOMContentLoaded', function () {
+    loadPointsFromLocalStorage();
     visFirst();
-    visSecond();
-    visThird();
-    visFourth();
-    visFifth();
-    visProdukt();
-};
+   
+});
