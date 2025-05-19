@@ -14,15 +14,14 @@ function updateCountdown() {
   sekunder = sekunder < 10 ? '0' + sekunder : sekunder;
 
   countdownEl.textContent = `${minutter}:${sekunder}`;
-  tid--;
+  tid--; 
 
   if (tid < 0) {
-    clearInterval(countdownInterval); // Stopper nedtællingen
+    clearInterval(countdownInterval);
     countdownEl.textContent = "0:00";
-    showMessage("Tiden er gået! (load bane 2)");
-    disableKeyboard();
+    window.location.href = "game1-food.html"; // ← skift til din ønskede fil
   }
-}
+} 
 
 function showMessage(msg) {
   alert(msg); // Du kan ændre denne til noget pænere senere
