@@ -1,5 +1,7 @@
 "use strict"
 
+const plopSound = new Audio("media/audio/plop.mp3");
+
 const madIkoner = [
     { src: "media/img/food-items/blueberry.png", type: "god" },
     { src: "media/img/food-items/banana.png", type: "god" },
@@ -26,18 +28,25 @@ function genererMadikon() {
     img.classList.add("food-icon");
     img.dataset.type = ikonData.type;
 
-    // Tilføj animationend listener i stedet for setTimeout
-    img.addEventListener("animationend", () => {
-        img.remove();
+    // Remove icon after animation ends (the movement animation)
+    img.addEventListener("animationend", (e) => {
+        if (e.animationName === "curveDown") {
+            img.remove();
+        }
     });
 
     img.addEventListener("click", () => {
-        img.remove();
-        // Tilføj din scoringslogik her senere
-    });
+    // Play bite sound
+    plopSound.currentTime = 0;
+    plopSound.play();
+
+    // Remove the icon
+    img.remove();
+});
 
     document.querySelector(".blodbane-left").appendChild(img);
 }
+
 
 // Justeret til 3 sekunder (3000ms)
 const spawnInterval = setInterval(genererMadikon, 1000);
