@@ -1,28 +1,34 @@
 "use strict";
 
-const targetDate = new Date().getTime() + 1000 * 480;
+const startTid = 45; // 45 sekunder
+let tid = startTid;
 
-let gameEnded = false;
+const countdownEl = document.querySelector(".timer"); // Henter <p class="timer">
 
-// Countdown function to update the timer
+const countdownInterval = setInterval(updateCountdown, 1000);
+
 function updateCountdown() {
-  const now = new Date().getTime();
-  const timeLeft = targetDate - now;
+  const minutter = Math.floor(tid / 60);
+  let sekunder = tid % 60;
 
-  // Calculate days, hours, minutes, and seconds
-  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  sekunder = sekunder < 10 ? '0' + sekunder : sekunder;
 
-  // Display the result in the countdown div
-  document.getElementById("countdown").innerHTML = 0${minutes}:${seconds};
+  countdownEl.textContent = `${minutter}:${sekunder}`;
+  tid--; 
 
-  // Check if the countdown has ended
-  if (timeLeft > 0 && !gameEnded) {
-    setTimeout(updateCountdown, 1000); // Call updateCountdown again after 1 second
-  } else {
-    document.getElementById("countdown").innerHTML = "The event has ended!";
-    if (!gameEnded) {
-      gameLoss();
-    }
+  if (tid < 0) {
+    clearInterval(countdownInterval);
+    countdownEl.textContent = "0:00";
+    window.location.href = "game1-food.html"; // ← skift til din ønskede fil
   }
+} 
+
+function showMessage(msg) {
+  alert(msg); // Du kan ændre denne til noget pænere senere
+}
+
+function disableKeyboard() {
+  document.onkeydown = function () {
+    return false;
+  };
 }
