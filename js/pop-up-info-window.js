@@ -1,3 +1,5 @@
+"use strict"
+
 const popUp = document.getElementById("pop-up");
 const span = document.querySelector(".close");
 
