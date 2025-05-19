@@ -40,8 +40,8 @@ function genererMadikon() {
     plopSound.currentTime = 0;
     plopSound.play();
 
-    // Remove the icon
-    window.event = event; //prøver at linke til event i point-counter...I guess?
+    
+    //window.event = event; //prøver at linke til event i point-counter...I guess?
         addPoint();
         img.remove();
     });

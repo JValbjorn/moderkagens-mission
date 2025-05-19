@@ -26,6 +26,7 @@ function resetPoints() {
     console.log("Resetter pointSystem");
 }
 
-// window.onload = function(){
-//     resetPointSystem();
-// }
+ window.onload = function(){
+     resetPointSystem();
+console.log("Resetter pointSystem2");
+}
