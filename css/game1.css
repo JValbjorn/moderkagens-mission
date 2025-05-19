@@ -10,10 +10,9 @@
     position: absolute;
     pointer-events: auto; /* så de kan klikkes på */
     z-index: 1000;
-    width: 9%;
+    width: 8%;
     animation: curveDown 4s cubic-bezier(0.42, 0, 1, 1) forwards;
   }
-
 
 @keyframes curveDown {
   0%    { transform: translate(0px, -50px); }
@@ -26,15 +25,15 @@
   23.3% { transform: translate(140px, 250px); }
   26.6% { transform: translate(160px, 290px); }
   30%   { transform: translate(180px, 330px); }
-  33.3% { transform: translate(195px, 370px); }
-  36.6% { transform: translate(205px, 410px); }
-  40%   { transform: translate(210px, 450px); }
-  43.3% { transform: translate(215px, 490px); }
-  46.6% { transform: translate(220px, 530px); }
-  50%   { transform: translate(220px, 570px); }
-  53.3% { transform: translate(215px, 610px); }
-  56.6% { transform: translate(210px, 650px); }
-  60%   { transform: translate(200px, 690px); }
+  33.3% { transform: translate(185px, 370px); }
+  36.6% { transform: translate(190px, 410px); }
+  40%   { transform: translate(195px, 450px); }
+  43.3% { transform: translate(200px, 490px); }
+  46.6% { transform: translate(200px, 530px); }
+  50%   { transform: translate(195px, 570px); }
+  53.3% { transform: translate(195px, 610px); }
+  56.6% { transform: translate(185px, 650px); }
+  60%   { transform: translate(185px, 690px); }
   63.3% { transform: translate(185px, 730px); }
   66.6% { transform: translate(170px, 770px); }
   70%   { transform: translate(150px, 810px); }
@@ -48,4 +47,5 @@
   96.6% { transform: translate(-80px, 1095px); }
   100%  { transform: translate(-120px, 1100px); }
 }
+
 
