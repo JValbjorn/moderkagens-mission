@@ -5,12 +5,12 @@ window.addEventListener("DOMContentLoaded", () => {
     popUp.style.display = "block";
 });
 
-close.onclick = () => {
-    popUp.style.display = "none";
-};
-
 window.onclick = (event) => {
     if (event.target === popUp) {
         popUp.style.display = "none";
     }
 };
+
+close.onclick = () => {
+    popUp.style.display = "none";
+  };
