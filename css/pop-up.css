@@ -28,25 +28,29 @@
   }
 
 .close {
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-  background-color: #29abe2; 
-  border-radius: 20px;
-  padding: 0.5rem;
-  margin-top: 2rem;
-  max-width: 15rem;
-
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #29abe2; 
+    border-radius: 23px;
+    padding: 0.7rem;
+    max-width: 15rem;
+    margin-left: 31%;
+    margin-top: 3rem; /*cant make the btn get some top space*/
   } 
 
   h1 {
     text-align: center;
     color: #ff5786 ;
     margin-bottom: 1rem;
+    font-size: 2rem;
   }
 
-  p {
+  p{
     text-align: center;
     margin-bottom: 0.5rem;
     font-size: 1.3rem;
   }
+
+
+  

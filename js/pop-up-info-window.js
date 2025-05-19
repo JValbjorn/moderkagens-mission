@@ -1,5 +1,5 @@
 const popUp = document.getElementById("pop-up");
-const close = document.getElementById(".close");
+const span = document.querySelector(".close");
 
 window.addEventListener("DOMContentLoaded", () => {
     popUp.style.display = "block";
@@ -11,6 +11,6 @@ window.onclick = (event) => {
     }
 };
 
-close.onclick = () => {
+  span.onclick = () => {
     popUp.style.display = "none";
   };
