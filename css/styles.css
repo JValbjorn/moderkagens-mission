@@ -77,9 +77,48 @@ a {
   }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
   } 
+
+
+/* Stage 1 spil interaktive del   */
+  .blodbane-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px; /* juster så det passer over blodbanen */
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none; /* så den ikke blokerer klik på resten af siden */
+  }
+
+  .food-icon {
+    position: absolute;
+    width: 50px;
+    pointer-events: auto; /* så de kan klikkes på */
+    animation: curveDown 5s linear forwards;
+  }
+
+  @keyframes curveDown {
+    0% {
+      transform: translate(0px, -50px);
+      opacity: 1;
+    }
+    25% {
+      transform: translate(10px, 150px);
+    }
+    50% {
+      transform: translate(25px, 300px);
+    }
+    75% {
+      transform: translate(40px, 450px);
+    }
+    100% {
+      transform: translate(55px, 650px);
+      opacity: 0;
+    }
+  }
