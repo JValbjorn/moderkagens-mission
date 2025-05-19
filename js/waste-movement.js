@@ -1,5 +1,7 @@
 "use strict"
 
+const popSound = new Audio("media/audio/pop.mp3");
+
 const wasteContainer = document.getElementById("waste-container");
 
 const wasteIcons = [
@@ -10,9 +12,9 @@ const wasteIcons = [
 
 const spawnPositions = [
   { x: 160, y: 1200 },
-  { x: 300, y: 1100 },
+  { x: 300, y: 1150 },
   { x: 500, y: 1100 },
-  { x: 650, y: 1100 },
+  { x: 650, y: 1130 },
   { x: 800, y: 1200 }
 ];
 
@@ -45,6 +47,9 @@ function spawnWasteIcon() {
 
 
   icon.addEventListener("click", () => {
+          // Play pop sound
+    popSound.currentTime = 0;
+    popSound.play();
     icon.remove();
     // Gør positionen ledig igen
     usedPositions = usedPositions.filter(p => p !== pos);
@@ -54,6 +59,6 @@ function spawnWasteIcon() {
 }
 
 // Kør funktionen hvert sekund
-setInterval(spawnWasteIcon, 4000);
+setInterval(spawnWasteIcon, 3000);
 
 
