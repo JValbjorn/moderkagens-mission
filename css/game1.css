@@ -1,6 +1,6 @@
 /* Stage 1 spil interaktive del   */
   .blodbane-left {
-  top: 12%; /* Juster baseret på dit billede */
+  top: 12%; 
   left: 8%;
   width: 24%;
   height: 78%;
@@ -18,7 +18,7 @@
  
 
   
-
+/* Alle disse keyframes sikrer en smooth buet animation af mad-ikonerne */
 @keyframes curveDown {
   0%    { transform: translate(0px, -50px); }
   3.3%  { transform: translate(20px,  10px); }
