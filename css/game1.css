@@ -11,8 +11,11 @@
     pointer-events: auto; /* så de kan klikkes på */
     z-index: 1000;
     width: 8%;
+    padding: 20px;  /* gør hitboxen større */
+    box-sizing: content-box; /* sikrer at padding/hitboxen ikke formindsker billederne */
     animation: curveDown 4s cubic-bezier(0.42, 0, 1, 1) forwards;
   }
+ 
 
 @keyframes curveDown {
   0%    { transform: translate(0px, -50px); }
