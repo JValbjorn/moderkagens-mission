@@ -6,11 +6,15 @@
     <title>game-waste</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/in-game.css" />
+    <link rel="stylesheet" href="css/game1.css"/>
+    <link rel="stylesheet" href="css/game2.css"/>
   </head>
   <body>
-    <main>
+    
+    <main id="main-content">
+      
       <div class="blue-cornors">
-        <div class="home-btn">
+        <div class="home-btn"> 
           <a href="index.html">
             <img
               src="media/img/icons/back-to-home-white.png"
@@ -20,10 +24,13 @@
           </a>
         </div>
         <div class="timer-cornor">
-          <p class="timer">0:45</p> 
-          <p>Yay du har loadet næste stage!</p>
+          <p class="timer">0:45</p>
         </div>
-      </div>
+      </div> 
+
+      <section class="blodbane-left">
+        <!-- Madikoner tilføjes dynamisk med JS -->
+      </section>
 
       <figure>
         <img
@@ -33,14 +40,7 @@
         />
       </figure>
 
-      <div class="pop-up">
-        <div class="pop-up-content">
-          <h1>Du gør det godt!</h1>
-          <p>Babyen fordøjer maden – og det giver affaldsstoffer.</p>
-          <p>Bliv ved med at give babyen næring – og tryk affaldsstofferne væk, når de dukker op!</p>
-          <p class="close">Det er forstået!</p>
-        </div>
-      </div>
+      
 
       <figure>
         <img
@@ -49,6 +49,14 @@
           class="baby-game"
         />
       </figure>
+      <section id="waste-container">
+        <!-- Affaldsstof-ikoner tilføjes dynamisk med JS -->
+      </section>
     </main>
-  </body>
-</html>
+    <script src="js/local-storage.js"></script>
+    <script src="js/point-counter.js"></script>
+    <script src="js/food-movement.js"></script>
+    <script src="js/waste-movement.js"></script>
+    <!-- <script src="js/timer.js"></script> -->
+  </body> 
+</html> 
