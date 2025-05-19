@@ -19,7 +19,7 @@ function updateCountdown() {
   if (tid < 0) {
     clearInterval(countdownInterval);
     countdownEl.textContent = "0:00";
-    window.location.href = "game1-food.html"; // ← skift til din ønskede fil
+    window.location.href = "game2-organic-waste.html"; // ← skift til næste stage 
   }
 } 
 
