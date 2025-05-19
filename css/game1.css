@@ -1,0 +1,39 @@
+/* Stage 1 spil interaktive del   */
+  .blodbane-left {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 120px; /* juster så det passer over blodbanen */
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none; /* så den ikke blokerer klik på resten af siden */
+  }
+
+  .food-icon {
+    position: absolute;
+    width: 150px;
+    pointer-events: auto; /* så de kan klikkes på */
+    animation: curveDown 3s linear forwards;
+    z-index: 1000;
+    
+  }
+
+  @keyframes curveDown {
+    0% {
+      transform: translate(0px, -50px);
+      opacity: 1;
+    }
+    25% {
+      transform: translate(10px, 150px);
+    }
+    50% {
+      transform: translate(25px, 300px);
+    }
+    75% {
+      transform: translate(40px, 450px);
+    }
+    100% {
+      transform: translate(55px, 650px);
+      opacity: 1;
+    }
+  }
