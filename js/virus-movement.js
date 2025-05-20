@@ -17,6 +17,14 @@ const spawnPositions = [
 
 function genererVirusIkon() {
     const ikonData = virusIkoner[Math.floor(Math.random() * virusIkoner.length)];
+
+    //Local storage og point counter
+    if (generatedCount[ikonData.type] !== undefined) {
+        generatedCount[ikonData.type]++;
+        saveGeneratedCount();
+        updateScoreDisplay(); // hvis du vil opdatere scoren live
+    }
+
     const img = document.createElement("img");
     img.src = ikonData.src;
     img.classList.add("virus-icon");
