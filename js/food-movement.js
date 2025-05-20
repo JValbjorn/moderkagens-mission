@@ -36,7 +36,7 @@ function genererMadikon() {
     });
 
     img.addEventListener("click", () => {
-          // Play bite sound
+          // Play plop sound
     plopSound.currentTime = 0;
     plopSound.play();
 
