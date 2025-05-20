@@ -7,3 +7,36 @@
       top: 90%;
     }
   }
+
+  @keyframes virus-movement {
+    0%    { transform: translate(500px, 50px); }
+    3.3%  { transform: translate(20px,  100px); }
+    6.6%  { transform: translate(40px,  150px); }
+    10%   { transform: translate(60px,  200px); }
+    13.3% { transform: translate(80px,  250px); }
+    16.6% { transform: translate(100px, 300px); }
+    20%   { transform: translate(120px, 350px); }
+    23.3% { transform: translate(140px, 400px); }
+    26.6% { transform: translate(160px, 450px); }
+    30%   { transform: translate(180px, 500px); }
+    33.3% { transform: translate(185px, 550px); }
+    36.6% { transform: translate(190px, 600px); }
+    40%   { transform: translate(195px, 650px); }
+    43.3% { transform: translate(200px, 700px); }
+    46.6% { transform: translate(200px, 750px); }
+    50%   { transform: translate(195px, 800px); }
+    53.3% { transform: translate(195px, 850px); }
+    56.6% { transform: translate(185px, 900px); }
+    60%   { transform: translate(185px, 950px); }
+    63.3% { transform: translate(185px, 1000px); }
+    66.6% { transform: translate(170px, 1050px); }
+    70%   { transform: translate(150px, 1100px); }
+    73.3% { transform: translate(130px, 1150px); }
+    76.6% { transform: translate(110px, 1200px); }
+    80%   { transform: translate(90px, 1250px); }
+    83.3% { transform: translate(60px, 1300px); }
+    86.6% { transform: translate(30px, 1350px); }
+    90%   { transform: translate(0px, 1400px); }
+
+    100%  { transform: translate(-120px, 1100px); }
+  }
