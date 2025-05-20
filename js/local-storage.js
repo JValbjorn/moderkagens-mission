@@ -37,11 +37,26 @@ function updateUIFromCart() {
     console.log("updateUI");
 }
 
+let totalIconsGenerated = parseInt(localStorage.getItem("totalIconsGenerated")) || 0;
+
+function saveGeneratedCount() {
+    localStorage.setItem("totalIconsGenerated", totalIconsGenerated);
+}
+
+function updateScoreDisplay() {
+    const clicked = scoreArray.reduce((sum, el) => sum + el.quantity, 0);
+    //document.getElementById("scoreDisplay").textContent = `${clicked} ud af ${totalIconsGenerated}`;
+    console.log(`${clicked} ud af ${totalIconsGenerated}`);
+}
+
 
 function resetPointSystem() {
     scoreArray.forEach(micro => {
         micro.quantity = 0;
         micro.total = 0;
+        totalIconsGenerated = 0;
+        saveGeneratedCount();
+        updateScoreDisplay();
         
     }); 
     console.log("PointSystem reset");
