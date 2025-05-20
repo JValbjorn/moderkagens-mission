@@ -1,6 +1,7 @@
 "use strict"
 
 const plopSound = new Audio("media/audio/plop.mp3");
+const virusContainer = document.getElementById("virus-container");
 
 const virusIkoner = [
     { src: "media/img/virus/herpes.png"},
@@ -9,9 +10,9 @@ const virusIkoner = [
 ];
 
 const spawnPositions = [
-    { x: -30, y: 300 },
-    { x: -30, y: 500 },
-    { x: -30, y: 700 }
+    { x: 300, y: -100 },
+    { x: 500, y: -100 },
+    { x: 700, y: -100 }
   ];
 
 function genererVirusIkon() {
