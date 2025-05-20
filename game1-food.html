@@ -6,19 +6,19 @@
     <title>game-food</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/in-game.css" />
-    <link rel="stylesheet" href="css/game1.css">
+    <link rel="stylesheet" href="css/game1.css" />
+    <link rel="stylesheet" href="css/pop-up.css" />
   </head>
   <body>
     <!-- <section id="video-container">
       <video id="intro-video" autoplay muted>
         <source src="media/video/Comp 1_2.mp4" type="video/mp4">
       </video>
-    </section>  --> 
-    
+    </section>  -->
+
     <main id="main-content">
-      
       <div class="blue-cornors">
-        <div class="home-btn"> 
+        <div class="home-btn">
           <a href="index.html">
             <img
               src="media/img/icons/back-to-home-white.png"
@@ -30,7 +30,7 @@
         <div class="timer-cornor">
           <p class="timer" data-redirect="game2-organic-waste.html">0:45</p>
         </div>
-      </div> 
+      </div>
 
       <section class="blodbane-left">
         <!-- Madikoner tilføjes dynamisk med JS -->
@@ -44,17 +44,6 @@
         />
       </figure>
 
-      <div class="pop-up" id="pop-up">
-        <div class="pop-up-content" id="pop-up-content">
-          <h1>Giv babyen næring - tryk på maden</h1>
-          <p>Du er moderkagen – og lige nu har fosteret brug for din hjælp!</p>
-          <p>Hold øje med, hvad der kommer igennem venstre blodåre.</p>
-          <p>-noget mad er bedre end andet-</p>
-          <div class="close-box">
-              <span class="close" id="close">Det er forstået!</span>
-          </div>
-        </div>
-
       <figure>
         <img
           src="media/img/baby/baby-in-womb-small.png"
@@ -62,11 +51,26 @@
           class="baby-game"
         />
       </figure>
+
+      <div class="pop-up" id="pop-up">
+        <div class="pop-up-content" id="pop-up-content">
+          <h1>Giv babyen næring - tryk på maden</h1>
+          <p>
+            Du er moderkagen – og lige nu har fosteret brug for din hjælp! Hold
+            øje med, hvad der kommer igennem venstre blodåre.
+          </p>
+          <p>-noget mad er bedre end andet-</p>
+          <div class="close-box">
+            <span class="close" id="close">Det er forstået!</span>
+          </div>
+        </div>
+      </div>
     </main>
     <script src="js/local-storage.js"></script>
     <script src="js/intro-video.js"></script>
     <script src="js/point-counter.js"></script>
     <script src="js/food-movement.js"></script>
-    <script src="js/timer.js"></script>
-  </body> 
-</html> 
+    <script src="js/pop-up-info-window.js"></script>
+    <!-- <script src="js/timer.js"></script>   -->
+  </body>
+</html>

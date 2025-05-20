@@ -1,4 +1,4 @@
-.pop-up {
+#pop-up {
     display: none; 
     position: fixed;
     z-index: 1000;

@@ -5,8 +5,8 @@
 }
 
 body {
-    /* max-width: 4000px;
-    max-height: 3612px; */
+    max-width: 1000px;
+    max-height: 1600px;
     overflow-x: hidden;
     overflow-y: hidden;
     min-height:1600px;
@@ -23,8 +23,6 @@ a {
     background-color: #047381;
     border: 5px solid #014555;
     border-radius: 0 0 150% 0;
-    /* box-shadow: 10px 10px 5px #rgba(0, 0, 0, 0.6); */
-
     position: absolute;
     z-index: 1001;
 }
