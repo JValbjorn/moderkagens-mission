@@ -36,12 +36,53 @@ function updateUIFromCart() {
    
     console.log("updateUI");
 }
+//total counter til at beregne scores
+let generatedCount = {
+    good: 0,
+    bad: 0,
+    waste: 0,
+    virus: 0
+};
+
+function saveGeneratedCount() {
+    localStorage.setItem("generatedCount", JSON.stringify(generatedCount));
+}
+
+function loadGeneratedCount() {
+    const stored = localStorage.getItem("generatedCount");
+    if (stored) {
+        generatedCount = JSON.parse(stored);
+    }
+}
+
+
+
+function updateScoreDisplay() {
+    scoreArray.forEach(item => {
+        const type = item.type;
+        const clicked = item.quantity;
+        const shown = generatedCount[type] || 0;
+
+        const el = document.getElementById(`score-${type}`);
+        if (el) {
+            
+            el.textContent = `${type.charAt(0).toUpperCase() + type.slice(1)}: ${clicked} / ${shown}`;
+        }
+        console.log(`${type.charAt(0).toUpperCase() + type.slice(1)}: ${clicked} / ${shown}`);
+    });
+}
 
 
 function resetPointSystem() {
     scoreArray.forEach(micro => {
         micro.quantity = 0;
         micro.total = 0;
+
+        Object.keys(generatedCount).forEach(type => {
+            generatedCount[type] = 0;
+        });
+        saveGeneratedCount();
+        updateScoreDisplay();
         
     }); 
     console.log("PointSystem reset");
@@ -53,6 +94,7 @@ function resetPointSystem() {
 // Loader data fra localStorage ved opstart
 window.addEventListener('DOMContentLoaded', function () {
     loadPointsFromLocalStorage();
+    loadGeneratedCount();
     
    
 });
