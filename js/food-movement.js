@@ -22,6 +22,10 @@ const madIkoner = [
 ];
 
 function genererMadikon() {
+    totalIconsGenerated++;
+    saveGeneratedCount();
+    updateScoreDisplay();
+    
     const ikonData = madIkoner[Math.floor(Math.random() * madIkoner.length)];
     const img = document.createElement("img");
     img.src = ikonData.src;
@@ -36,9 +40,9 @@ function genererMadikon() {
     });
 
     img.addEventListener("click", () => {
-          // Play plop sound
-    plopSound.currentTime = 0;
-    plopSound.play();
+    //       // Play plop sound
+    // plopSound.currentTime = 0;
+    // plopSound.play();
 
     
     //window.event = event; //prøver at linke til event i point-counter...I guess?

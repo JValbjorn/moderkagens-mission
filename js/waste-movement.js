@@ -1,64 +1,76 @@
-"use strict"
+"use strict";
 
-const popSound = new Audio("media/audio/pop.mp3");
+window.addEventListener("DOMContentLoaded", () => {
+  const popSound = new Audio("media/audio/pop.mp3");
+  const wasteContainer = document.getElementById("waste-container");
 
-const wasteContainer = document.getElementById("waste-container");
+  const wasteIcons = [
+    { src: "media/img/affaldsstoffer/waste-orange.png", type: "waste" },
+    { src: "media/img/affaldsstoffer/waste-pink.png", type: "waste" },
+    { src: "media/img/affaldsstoffer/waste-yellow.png", type: "waste" },
+  ];
 
-const wasteIcons = [
-  { src: "media/img/affaldsstoffer/waste-orange.png", type: "waste" },
-  { src: "media/img/affaldsstoffer/waste-pink.png", type: "waste" },
-  { src: "media/img/affaldsstoffer/waste-yellow.png", type: "waste" },
-];
+  const spawnPositions = [
+    { x: 160, y: 1200 },
+    { x: 300, y: 1150 },
+    { x: 500, y: 1100 },
+    { x: 650, y: 1130 },
+    { x: 800, y: 1200 }
+  ];
 
-const spawnPositions = [
-  { x: 160, y: 1200 },
-  { x: 300, y: 1150 },
-  { x: 500, y: 1100 },
-  { x: 650, y: 1130 },
-  { x: 800, y: 1200 }
-]; 
+  let usedPositions = [];
 
-// Liste over brugte positioner
-let usedPositions = [];
+  function spawnWasteIcon() {
+    const availablePositions = spawnPositions.filter(pos => !usedPositions.includes(pos));
+    if (availablePositions.length === 0) return;
 
-function spawnWasteIcon() {
-  // Find ledige positioner
-  const availablePositions = spawnPositions.filter(pos => !usedPositions.includes(pos));
+    const pos = availablePositions[Math.floor(Math.random() * availablePositions.length)];
+    usedPositions.push(pos);
 
-  // Hvis alle positioner er brugt, gør ingenting
-  if (availablePositions.length === 0) return;
+    const randomWaste = wasteIcons[Math.floor(Math.random() * wasteIcons.length)];
+    const icon = document.createElement("img");
+    icon.src = randomWaste.src;
+    icon.classList.add("waste-icon");
 
-  // Vælg en tilfældig ledig position
-  const pos = availablePositions[Math.floor(Math.random() * availablePositions.length)];
+    icon.style.position = "absolute";
+    icon.style.left = `${pos.x}px`;
+    icon.style.top = `${pos.y}px`;
+    icon.style.cursor = "pointer";
 
-  // Markér positionen som brugt
-  usedPositions.push(pos);
+    icon.addEventListener("click", () => {
+      popSound.currentTime = 0;
+      popSound.play();
 
-  // Vælg et affaldsikon
-  const randomWaste = wasteIcons[Math.floor(Math.random() * wasteIcons.length)];
-  const icon = document.createElement("img");
-  icon.src = randomWaste.src;
-  icon.classList.add("waste-icon");
+      icon.remove();
+      usedPositions = usedPositions.filter(p => p !== pos);
 
-  icon.style.position = "absolute";
-  icon.style.left = `${pos.x}px`;
-  icon.style.top = `${pos.y}px`;
-  icon.style.cursor = "pointer"; 
+      const newPos = { 
+        x: window.innerWidth - 300,  // 150px fra højre kant
+        y: window.innerHeight - 800
+      };
 
+      const exitIcon = document.createElement("img");
+      exitIcon.src = randomWaste.src;
+      exitIcon.classList.add("waste-icon");
 
-  icon.addEventListener("click", () => {
-          // Play pop sound
-    popSound.currentTime = 0;
-    popSound.play();
-    icon.remove();
-    // Gør positionen ledig igen
-    usedPositions = usedPositions.filter(p => p !== pos);
-  });
+      exitIcon.style.position = "absolute";
+      exitIcon.style.left = `${newPos.x}px`;
+      exitIcon.style.top = `${newPos.y}px`;
+      exitIcon.style.pointerEvents = "none";
+      exitIcon.style.animation = "slideOut 2s ease-out forwards";
 
-  wasteContainer.appendChild(icon);
-}
+      wasteContainer.appendChild(exitIcon);
 
-// Kør funktionen hvert sekund
-setInterval(spawnWasteIcon, 3000);
+      setTimeout(() => {
+        exitIcon.remove();
+      }, 2000);
+    });
 
+    wasteContainer.appendChild(icon);
+  }
+
+  // Første ikon spawn + interval hvert 3. sekund
+  spawnWasteIcon();
+  setInterval(spawnWasteIcon, 3000);
+});
 

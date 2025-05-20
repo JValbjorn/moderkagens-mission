@@ -6,24 +6,97 @@ body {
     top: 0;
 } 
 
-p {
-    font-size: 1.5rem;
+
+p,ul {
+    font-size: 1.1rem;
+    width: 60%;
+    display: inline;
+    unicode-bidi: isolate;
+    float: right;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
+.container-1,container-2,container-3,container-4 {  
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    padding-left: 0%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.container-1, p,ul {
+    font-size: 1.1rem;
+    width: 60%;
+    display: inline;
+    unicode-bidi: isolate;
+    float: right;
+    padding left: 0;
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container-2 {
+    font-size: 1.1rem;
+    width: 60%;
+    display: inline;
+    padding left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+
+}
+
+.container-3 {
+    font-size: 1.1rem;
+    width: 60%;
+    display: inline;
+    padding left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+
+}
+
+.container-4 {
+    font-size: 1.1rem;
+    width: 60%;
+    display: inline;
+    padding left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+
+}
+
+section.infograph-topics.food {
+    padding-top: 0%;
+}
 .infograph-topics {
     
-    /* margin-top: 7%;  */
+    padding-top: 0;
     padding-left: 2rem;
-
     display: flex;
-    justify-content: space-evenly;
-
+    justify-content: start;
     align-items: center;
 
 }
 
 .moderkage {
-    padding-top: 24rem;
+    padding-top: 18rem;
+    padding-left: 0%;
 }
 
 .food {
