@@ -16,7 +16,7 @@ const spawnPositions = [
   { x: 500, y: 1100 },
   { x: 650, y: 1130 },
   { x: 800, y: 1200 }
-];
+]; 
 
 // Liste over brugte positioner
 let usedPositions = [];
