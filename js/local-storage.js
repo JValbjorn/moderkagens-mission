@@ -53,6 +53,16 @@ function resetPointSystem() {
 // Loader data fra localStorage ved opstart
 window.addEventListener('DOMContentLoaded', function () {
     loadPointsFromLocalStorage();
-    visFirst();
+    
    
 });
+
+const urhere = window.location.pathname;
+    const pageName = urhere.substring(urhere.lastIndexOf('/') + 1);
+
+ const resetCondition = 'game1-food.html';
+    
+    if (resetCondition.includes(pageName)) {
+        console.log('Auto-reset page detected:', pageName);
+        resetPointSystem();
+    }

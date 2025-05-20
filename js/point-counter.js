@@ -20,13 +20,3 @@ function addPoint() {
     
     console.log(point);
 }
-
-function resetPoints() {
-    resetPointSystem();
-    console.log("Resetter pointSystem");
-}
-
- window.onload = function(){
-     resetPointSystem();
-console.log("Resetter pointSystem2");
-}
