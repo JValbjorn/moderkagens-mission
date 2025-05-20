@@ -36,17 +36,39 @@ function updateUIFromCart() {
    
     console.log("updateUI");
 }
-
-let totalIconsGenerated = parseInt(localStorage.getItem("totalIconsGenerated")) || 0;
+//total counter til at beregne scores
+let generatedCount = {
+    good: 0,
+    bad: 0,
+    waste: 0,
+    virus: 0
+};
 
 function saveGeneratedCount() {
-    localStorage.setItem("totalIconsGenerated", totalIconsGenerated);
+    localStorage.setItem("generatedCount", JSON.stringify(generatedCount));
 }
 
+function loadGeneratedCount() {
+    const stored = localStorage.getItem("generatedCount");
+    if (stored) {
+        generatedCount = JSON.parse(stored);
+    }
+}
+
+
+
 function updateScoreDisplay() {
-    const clicked = scoreArray.reduce((sum, el) => sum + el.quantity, 0);
-    //document.getElementById("scoreDisplay").textContent = `${clicked} ud af ${totalIconsGenerated}`;
-    console.log(`${clicked} ud af ${totalIconsGenerated}`);
+    scoreArray.forEach(item => {
+        const type = item.type;
+        const clicked = item.quantity;
+        const shown = generatedCount[type] || 0;
+
+        const el = document.getElementById(`score-${type}`);
+        if (el) {
+            console.log(`${type.charAt(0).toUpperCase() + type.slice(1)}: ${clicked} / ${shown}`);
+            // el.textContent = `${type.charAt(0).toUpperCase() + type.slice(1)}: ${clicked} / ${shown}`;
+        }
+    });
 }
 
 
@@ -68,6 +90,7 @@ function resetPointSystem() {
 // Loader data fra localStorage ved opstart
 window.addEventListener('DOMContentLoaded', function () {
     loadPointsFromLocalStorage();
+    loadGeneratedCount();
     
    
 });

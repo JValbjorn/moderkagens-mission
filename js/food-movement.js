@@ -22,11 +22,19 @@ const madIkoner = [
 ];
 
 function genererMadikon() {
-    totalIconsGenerated++;
-    saveGeneratedCount();
-    updateScoreDisplay();
-    
+    // totalIconsGenerated++;
+    // saveGeneratedCount();
+    // updateScoreDisplay();
+
     const ikonData = madIkoner[Math.floor(Math.random() * madIkoner.length)];
+
+       // 👉 Her tæller vi hvor mange gange hver type er blevet vist
+    if (generatedCount[ikonData.type] !== undefined) {
+        generatedCount[ikonData.type]++;
+        saveGeneratedCount();
+        updateScoreDisplay(); // hvis du vil opdatere scoren live
+    }
+
     const img = document.createElement("img");
     img.src = ikonData.src;
     img.classList.add("food-icon");

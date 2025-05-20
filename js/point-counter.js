@@ -13,7 +13,7 @@ function addPoint() {
         
         savePointsToLocalStorage();
         updateUIFromCart();
-        window.updateScoreDisplay();
+        updateScoreDisplay();
     }
     //console.logs er bare for at tjekke om vi når til dette sted i scriptet,
     // og om de har en værdi eller om de er "undefined"
