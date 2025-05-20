@@ -65,9 +65,10 @@ function updateScoreDisplay() {
 
         const el = document.getElementById(`score-${type}`);
         if (el) {
-            console.log(`${type.charAt(0).toUpperCase() + type.slice(1)}: ${clicked} / ${shown}`);
-            // el.textContent = `${type.charAt(0).toUpperCase() + type.slice(1)}: ${clicked} / ${shown}`;
+            
+            el.textContent = `${type.charAt(0).toUpperCase() + type.slice(1)}: ${clicked} / ${shown}`;
         }
+        console.log(`${type.charAt(0).toUpperCase() + type.slice(1)}: ${clicked} / ${shown}`);
     });
 }
 
@@ -76,7 +77,10 @@ function resetPointSystem() {
     scoreArray.forEach(micro => {
         micro.quantity = 0;
         micro.total = 0;
-        totalIconsGenerated = 0;
+
+        Object.keys(generatedCount).forEach(type => {
+            generatedCount[type] = 0;
+        });
         saveGeneratedCount();
         updateScoreDisplay();
         
