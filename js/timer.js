@@ -19,7 +19,8 @@ function updateCountdown() {
   if (tid < 0) {
     clearInterval(countdownInterval);
     countdownEl.textContent = "0:00";
-    window.location.href = "game2-organic-waste.html"; // ← skift til næste stage 
+    const redirectUrl = countdownEl.dataset.redirect || "default-page.html";
+    window.location.href = redirectUrl; 
   }
 } 
 
