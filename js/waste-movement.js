@@ -1,8 +1,10 @@
 "use strict"
 
+window.addEventListener("DOMContentLoaded", () => {
 const popSound = new Audio("media/audio/pop.mp3");
 
 const wasteContainer = document.getElementById("waste-container");
+
 
 const wasteIcons = [
   { src: "media/img/affaldsstoffer/waste-orange.png", type: "waste" },
@@ -16,7 +18,9 @@ const spawnPositions = [
   { x: 500, y: 1100 },
   { x: 650, y: 1130 },
   { x: 800, y: 1200 }
-]; 
+];
+
+console.log(wasteContainer);
 
 // Liste over brugte positioner
 let usedPositions = [];
@@ -43,7 +47,7 @@ function spawnWasteIcon() {
   icon.style.position = "absolute";
   icon.style.left = `${pos.x}px`;
   icon.style.top = `${pos.y}px`;
-  icon.style.cursor = "pointer"; 
+  icon.style.cursor = "pointer";
 
 
   icon.addEventListener("click", () => {
@@ -60,5 +64,5 @@ function spawnWasteIcon() {
 
 // Kør funktionen hvert sekund
 setInterval(spawnWasteIcon, 3000);
-
+});
 
