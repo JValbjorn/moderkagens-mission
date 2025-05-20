@@ -1,234 +1,144 @@
 body {
-    background-image:url(../media/img/backgrunds/background-placenta.png);
-    background-repeat: no-repeat;    
-    background-size: contain;
-    background-position: center top;
-    top: 0;
-} 
-
-
-p,ul {
-    font-size: 1.1rem;
-    width: 60%;
-    display: inline;
-    unicode-bidi: isolate;
-    float: right;
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
+  background-image: url(../media/img/backgrunds/background-placenta.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  top: 0;
 }
 
-.container-1,container-2,container-3,container-4 {  
-    display: flex;
-    flex-direction: column;
-    margin-left: 0;
-    padding-left: 0%;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: flex-start;
-
+p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
-.container-1, p,ul {
-    font-size: 1.1rem;
-    width: 60%;
-    display: inline;
-    unicode-bidi: isolate;
-    float: right;
-    padding left: 0;
-    margin-left: 4rem;
-    display: flex;
-    flex-direction: column;
-    
+ul {
+  margin-left: 1rem;
+  margin-bottom: 0.1rem;
 }
 
-.container-1 {
-    font-size: 1.1rem;
-    width: 60%;
-    display: inline;
-    padding left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-start;
-}
-
-.container-2 {
-    font-size: 1.1rem;
-    width: 65%;
-    display: inline;
-    padding left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: flex-end;
-}
-
-.container-3 {
-    font-size: 1.1rem;
-    width: 60%;
-    display: inline;
-    padding left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-start;
-}
-
-.infograph-topics.waste {
-    padding-left: 4rem;
-}
-.container-4 {
-    font-size: 1.1rem;
-    width: 70%;
-    display: inline;
-    padding left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: flex-end;
-
-}
-
-section.infograph-topics.food {
-    padding-top: 0%;
-}
-.infograph-topics {
-    padding-left: 7rem;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-
-}
-
-.img-food {
-    padding-top: 0%;
-    padding-left: 1rem;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-.img-waste {
-    padding-top: 1rem;
-    padding-left: 0rem;
-    padding-bottom: 2rem;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-.img-virus {
-    padding-top: 1rem;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-.moderkage {
-    padding-top: 18rem;
-    padding-left: 0%;
-}
-
-.food {
-    padding-top: 10.5rem;
-
-
-}
-
-.waste {
-    padding-top: 2rem;
-    
-}
-
-.home-btn {
-    position: absolute;
-    z-index: 10;
-    top: 0;
+li {
+  margin-left: 1rem;
 }
 
 .spil-btn {
-    font-size: 2.5rem;
-    background-color: #1cb7cd;
-    width: 13rem;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 50px;
-    
-    position: absolute;
-    right: 3rem;
-    bottom: 8rem;
+  font-size: 2.5rem;
+  background-color: #fda5a1;
+  border: 5px solid #ff737d;
+  width: 13rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 50px;
+
+  position: absolute;
+  right: 3rem;
+  bottom: 7rem;
 }
 
+.home-btn {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+}
 
+.infographic-content {
+  display: flex;
+  flex-direction: column;
+}
 
+.infograph-topics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15%;
+  padding-right: 15%;
+}
 
-.img-food,.img-waste,.img-virus {
-    pointer-events: auto;
-    animation: upDown 2.5s ease-in-out infinite;
-    z-index: 1100;
-     /* Fade-in effect when it appears */
-    opacity: 0;
-    animation: fadeIn 1.5s ease forwards, upDown 2.5s ease-in-out infinite;
- 
+.moderkage {
+  max-width: 64%;
+  margin-top: 26%;
+}
+
+.food {
+  margin-top: 6%;
+}
+
+.waste {
+  margin-top: 2%;
+}
+
+.virus {
+  margin-top: 0%;
+}
+
+.img-food,
+.img-waste,
+.img-virus {
+  pointer-events: auto;
+  animation: upDown 2.5s ease-in-out infinite;
+  z-index: 1100;
+  animation: fadeIn 1.5s ease forwards, upDown 2.5s ease-in-out infinite;
 }
 
 .waste-icon {
-    position: absolute;
-    width: 90px;
-    pointer-events: auto;
-    animation: upDown 2.5s ease-in-out infinite;
-    z-index: 1100;
-     /* Fade-in effect when it appears */
+  position: absolute;
+  width: 90px;
+  pointer-events: auto;
+  animation: upDown 2.5s ease-in-out infinite;
+  z-index: 1100;
+  animation: fadeIn 1.5s ease forwards, upDown 2.5s ease-in-out infinite;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
     opacity: 0;
-    animation: fadeIn 1.5s ease forwards, upDown 2.5s ease-in-out infinite;
-  } 
-  
-  
-  @keyframes upDown {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
   }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  to {
+    opacity: 1;
   }
-  
-  @keyframes slideOut {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  
-    25% {
-      transform: translate(-40px, -250px);
-      opacity: 1;
-    }
-  
-    50% {
-      transform: translate(-100px, -500px); /* Curve toward center-left */
-      opacity: 1;
-    }
-    
-    75% {
-      transform: translate(-70px, -750px);
-      opacity: 1;
-    }
-    90% {
-      transform: translate(-50px, -850px);
-      opacity: 1;
-    }
-  
-    100% {
-      transform: translate(200px, -1200px); /* Nedad – eller brug fx translateX(800px) for mod højre */
-      opacity: 1;
-    }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  
-  
+
+  25% {
+    transform: translate(-40px, -250px);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(-100px, -500px); /* Curve toward center-left */
+    opacity: 1;
+  }
+
+  75% {
+    transform: translate(-70px, -750px);
+    opacity: 1;
+  }
+  90% {
+    transform: translate(-50px, -850px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(
+      200px,
+      -1200px
+    ); /* Nedad – eller brug fx translateX(800px) for mod højre */
+    opacity: 1;
+  }
+}
