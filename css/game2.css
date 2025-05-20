@@ -24,6 +24,7 @@
    /* Fade-in effect when it appears */
   opacity: 0;
   animation: fadeIn 1.5s ease forwards, upDown 2.5s ease-in-out infinite;
+  
 } 
 
 
@@ -39,36 +40,60 @@
 }
 
 @keyframes slideOut {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  25% {
-    transform: translate(-40px, -250px);
-    opacity: 1;
-  }
-
-  50% {
-    transform: translate(-100px, -500px); /* Curve toward center-left */
-    opacity: 1;
-  }
-
-  
-  75% {
-    transform: translate(-70px, -750px);
-    opacity: 1;
-  }
-  90% {
-    transform: translate(-50px, -850px);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translate(200px, -1200px); /* Nedad – eller brug fx translateX(800px) for mod højre */
-    opacity: 1;
-  }
+  0.0% { transform: translate(50.0px, 0.0px); opacity: 1; }
+  2.0% { transform: translate(35px, -31.4px); }
+  4.1% { transform: translate(20.1px, -72.1px); }
+  6.1% { transform: translate(5.7px, -112.2px); }
+  8.2% { transform: translate(1.7px, -146.2px); }
+  10.2% { transform: translate(-10px, -184.4px); }
+  12.2% { transform: translate(-20px, -232.7px); }
+  14.3% { transform: translate(-30px, -275.5px); }
+  16.3% { transform: translate(-40px, -307.3px); }
+  18.4% { transform: translate(-50px, -332.1px); }
+  20.4% { transform: translate(-60px, -354.5px); }
+  22.4% { transform: translate(-70px, -377.5px); }
+  24.5% { transform: translate(-80px, -401.5px); }
+  26.5% { transform: translate(-90px, -426.3px); }
+  28.6% { transform: translate(-100px, -451.8px); }
+  30.6% { transform: translate(-110px, -477.9px); }
+  32.7% { transform: translate(-120px, -504.4px); }
+  34.7% { transform: translate(-130px, -531.1px); }
+  36.7% { transform: translate(-140px, -557.8px); }
+  38.8% { transform: translate(-150px, -584.3px); }
+  40.8% { transform: translate(-160px, -610.3px); }
+  42.9% { transform: translate(-165px, -635.8px); }
+  44.9% { transform: translate(-170px, -660.6px); }
+  46.9% { transform: translate(-175px, -684.9px); }
+  49.0% { transform: translate(-180px, -708.4px); }
+  51.0% { transform: translate(-180px, -731.4px); }
+  53.1% { transform: translate(-170px, -753.8px); }
+  55.1% { transform: translate(-170px, -776.1px); }
+  57.1% { transform: translate(-1px, -798.3px); }
+  59.2% { transform: translate(-130px, -820.8px); }
+  61.2% { transform: translate(-120px, -843.9px); }
+  63.3% { transform: translate(-115px, -867.7px); }
+  65.3% { transform: translate(-105px, -892.1px); }
+  67.3% { transform: translate(-80px, -916.9px); }
+  69.4% { transform: translate(-70px, -942.3px); }
+  71.4% { transform: translate(59.1px, -968.1px); }
+  73.5% { transform: translate(72.9px, -993.8px); }
+  75.5% { transform: translate(87.3px, -1019.1px); }
+  77.6% { transform: translate(102.1px, -1043.2px); }
+  79.6% { transform: translate(117.0px, -1065.7px); }
+  81.6% { transform: translate(131.9px, -1086.2px); }
+  83.7% { transform: translate(146.5px, -1104.4px); }
+  85.7% { transform: translate(160.9px, -1120.8px); }
+  87.8% { transform: translate(174.9px, -1135.5px); }
+  89.8% { transform: translate(188.7px, -1148.8px); }
+  91.8% { transform: translate(201.9px, -1160.7px); }
+  93.9% { transform: translate(214.8px, -1171.6px); }
+  95.9% { transform: translate(227.1px, -1181.6px); }
+  98.0% { transform: translate(238.9px, -1191.0px); }
+  100.0% { transform: translate(250.0px, -1200.0px); opacity: 1; }
 }
+
+
+
 
 
 
