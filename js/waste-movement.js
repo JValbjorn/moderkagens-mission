@@ -28,6 +28,14 @@ window.addEventListener("DOMContentLoaded", () => {
     usedPositions.push(pos);
 
     const randomWaste = wasteIcons[Math.floor(Math.random() * wasteIcons.length)];
+
+    //Triers local addpoint og local storage bavl
+        if (generatedCount[randomWaste.type] !== undefined) {
+        generatedCount[randomWaste.type]++;
+        saveGeneratedCount();
+        updateScoreDisplay(); // hvis du vil opdatere scoren live
+    }
+
     const icon = document.createElement("img");
     icon.src = randomWaste.src;
     icon.classList.add("waste-icon");
@@ -40,6 +48,9 @@ window.addEventListener("DOMContentLoaded", () => {
     icon.addEventListener("click", () => {
       popSound.currentTime = 0;
       popSound.play();
+
+      //window.event = event; //prøver at linke til event i point-counter...I guess?
+        addPoint();
 
       icon.remove();
       usedPositions = usedPositions.filter(p => p !== pos);
