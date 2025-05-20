@@ -15,7 +15,7 @@
    /* Fade-in effect when it appears */
   opacity: 0;
   animation: fadeIn 1.5s ease forwards, upDown 2.5s ease-in-out infinite;
-}
+} 
 
 
 @keyframes upDown {
