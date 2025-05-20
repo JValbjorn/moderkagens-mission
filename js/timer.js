@@ -1,6 +1,6 @@
 "use strict";
 
-const startTid = 45; // 45 sekunder
+const startTid = 5; // 45 sekunder
 let tid = startTid;
 
 const countdownEl = document.querySelector(".timer"); // Henter <p class="timer">
