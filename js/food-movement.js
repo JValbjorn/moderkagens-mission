@@ -3,7 +3,7 @@
 const plopSound = new Audio("media/audio/plop.mp3");
 
 const madIkoner = [
-    { src: "media/img/food-items/blueberry.png", type: "good" },
+    { src: "media/img/food-items/blueberry.png", type: "good" }, 
     { src: "media/img/food-items/banana.png", type: "good" },
     { src: "media/img/food-items/avcado.png", type: "good" },
     { src: "media/img/food-items/carrot.png", type: "good" },

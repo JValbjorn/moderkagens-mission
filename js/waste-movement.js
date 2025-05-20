@@ -31,7 +31,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     //Triers local addpoint og local storage bavl
         if (generatedCount[randomWaste.type] !== undefined) {
-        generatedCount[randomWaste.type]++;
+        generatedCount[randomWaste.type]++; 
         saveGeneratedCount();
         updateScoreDisplay(); // hvis du vil opdatere scoren live
     }
