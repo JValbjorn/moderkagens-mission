@@ -39,3 +39,5 @@ function genererVirusIkon() {
 
     
 } 
+
+setInterval(genererVirusIkon, 1000);
