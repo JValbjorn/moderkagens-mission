@@ -79,9 +79,9 @@ object-fit: none; */
     flex-direction: column;
     row-gap: 1rem;
 }
-.resultater img{
-    /* width: 20%; */
-}
+/* .resultater img{
+    width: 20%;
+} */
 
 .prog-doughnuts{
     opacity: 0;
