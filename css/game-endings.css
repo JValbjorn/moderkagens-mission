@@ -188,7 +188,7 @@ h3 {
 svg {
   width: 100%;
   height: 100%;
-  transform: rotate(-90deg);
+  
 }
 
 .bg {
@@ -201,7 +201,8 @@ svg {
   fill: none;
   stroke: #4caf50; /* grøn – skift for "bad"/"waste" */
   stroke-width: 3;
-  stroke-dasharray: 100, 100;
+  stroke-dasharray: 100; /*før 0, 100*/
+  stroke-dashoffset: 100; /*før 25*/
   stroke-linecap: round;
   transition: stroke-dasharray 0.5s ease;
 }
