@@ -2,6 +2,7 @@ let gamePaused = true;
 
 
 
+
 function finishGameState() {
   // Reset game state variables
   gamePaused = true;
@@ -16,7 +17,7 @@ function finishGameState() {
 
   const virusContainer = document.getElementById("virus-container");
   if (virusContainer) {
-    virusContainer.innerHTML = "";
+    virusContainer.innerHTML = ""; 
   }
 
   const foodContainer = document.querySelector(".blodbane-left");

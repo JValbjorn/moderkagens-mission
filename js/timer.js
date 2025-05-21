@@ -16,22 +16,29 @@ function updateCountdown() {
   const minutter = Math.floor(tid / 60);
   let sekunder = tid % 60;
 
-  sekunder = sekunder < 10 ? '0' + sekunder : sekunder;
+  sekunder = sekunder < 10 ? "0" + sekunder : sekunder;
 
   countdownEl.textContent = `${minutter}:${sekunder}`;
-  tid--; 
+  tid--;
 
   if (tid < 0) {
     clearInterval(countdownInterval);
     countdownEl.textContent = "0:00";
     finishGameState();
-    const redirectUrl = countdownEl.dataset.redirect || "default-page.html";
-    window.location.href = redirectUrl; 
+    if (stage < 3) {
+      const redirectUrl = countdownEl.dataset.redirect || "default-page.html";
+      window.location.href = redirectUrl;
+    } else {
+      const congrats = document.getElementById("congrats");
+      if (congrats) {
+        congrats.style.display = "block"; // This makes the popup visible
+      }
+    }
   }
-} 
+}
 
 function showMessage(msg) {
-  alert(msg); 
+  alert(msg);
 }
 
 function disableKeyboard() {
@@ -39,5 +46,3 @@ function disableKeyboard() {
     return false;
   };
 }
-
-
