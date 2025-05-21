@@ -1,4 +1,7 @@
 "use strict";
+let gfProcent = 0;
+let bfProcent = 0;
+let wasteProcent = 0;
 
 function goodLom(){
     let gf = scoreArray.filter(produkt =>produkt.type.includes("good"));
@@ -8,11 +11,19 @@ function goodLom(){
         .filter(key => key === "good")
         .reduce((sum, key) => sum + generatedCount[key], 0);
 
-    let gfProcent = gftal / gfT *100;
+     gfProcent = gftal / gfT *100;
     console.log(gfProcent);
     updateCircularProgress("good", gfProcent);
 
 }
+// function goodLom(){
+//     let gf = scoreArray.filter(produkt => produkt.type.includes("good"));
+//     let gftal = gf.reduce((sum, ele) => sum + ele.quantity, 0);
+//     let gfT = Object.keys(generatedCount).filter(key => key === "good").reduce((sum, key) => sum + generatedCount[key], 0);
+//     gfProcent = gftal / gfT * 100;
+//     console.log(gfProcent);
+//     updateCircularProgress("good", gfProcent);
+// }
 
 function badLom(){
     let bf = scoreArray.filter(produkt =>produkt.type.includes("bad"));
@@ -22,7 +33,7 @@ function badLom(){
         .filter(key => key === "bad")
         .reduce((sum, key) => sum + generatedCount[key], 0);
 
-    let bfProcent = bftal / bfT *100;
+     bfProcent = bftal / bfT *100;
     console.log(bfProcent);
     updateCircularProgress("bad", bfProcent);
 }
@@ -36,7 +47,7 @@ function wasteLom(){
         .filter(key => key === "waste")
         .reduce((sum, key) => sum + generatedCount[key], 0);
 
-    let wasteProcent = wastetal / wasteT *100;
+     wasteProcent = wastetal / wasteT *100;
     console.log(wasteProcent);
     updateCircularProgress("waste", wasteProcent);
 }
@@ -49,7 +60,7 @@ function virusLom(){
         .filter(key => key === "virus")
         .reduce((sum, key) => sum + generatedCount[key], 0);
 
-    let virusProcent = virustal / virusT *100;
+     virusProcent = virustal / virusT *100;
     console.log(virusProcent);
     updateCircularProgress("virus", virusProcent);
 
