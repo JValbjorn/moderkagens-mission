@@ -2,6 +2,9 @@
 
 window.addEventListener("DOMContentLoaded", function (){
 const performance = document.getElementById('congrats-btn');
+
+
+
 let samletScore = gfProcent + bfProcent + wasteProcent;
 console.log(samletScore);
 
