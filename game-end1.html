@@ -17,12 +17,44 @@
             <h2 class="konsekvenser">Din baby er sund, rask og højlydt</h2>
         </section>
         
-        <!-- <div id="scoreDisplay">
+        <!-- <figure class="scoreDisplay">
             <p id="score-good">Good: 0 / 0</p>
             <p id="score-bad">Bad: 0 / 0</p>
             <p id="score-waste">Waste: 0 / 0</p>
             <p id="score-virus">Virus: 0 / 0</p>
-        </div> -->
+        </figure> -->
+
+        <article class="progress-container">
+  <section class="circle-progress" data-type="good">
+    <svg viewBox="0 0 36 36">
+      <path class="bg" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+      <path class="progress" d="" />
+      <text x="18" y="20.35" class="percentage">0%</text>
+    </svg>
+    <p>Good</p>
+  </section>
+
+  <section class="circle-progress" data-type="bad">
+    <svg viewBox="0 0 36 36">
+      <path class="bg" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+      <path class="progress" d="" />
+      <text x="18" y="20.35" class="percentage">0%</text>
+    </svg>
+    <p>Bad</p>
+    <!-- Samme struktur som ovenfor -->
+  </section>
+
+  <section class="circle-progress" data-type="waste">
+    <svg viewBox="0 0 36 36">
+      <path class="bg" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+      <path class="progress" d="" />
+      <text x="18" y="20.35" class="percentage">0%</text>
+    </svg>
+    <p>Waste</p>
+    <!-- Samme struktur -->
+  </section>
+</article>
+
 
         <article class="baby-scores">
 
@@ -78,6 +110,7 @@
         </div>   
         
     </main>
-    
+    <script src="js/congrats.js"></script>
+    <script src="js/scores.js"></script>
 </body>
 </html>
