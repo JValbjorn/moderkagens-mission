@@ -24,6 +24,7 @@
    /* Fade-in effect when it appears */
   opacity: 0;
   animation: fadeIn 1.5s ease forwards, upDown 2.5s ease-in-out infinite;
+  animation-delay: 5s;
   
 } 
 
@@ -41,7 +42,7 @@
 
 
 @keyframes slideOut {
-  0%    { transform: translate(220px, calc(15vh - 40px)); opacity: 1; }
+  0%    { transform: translate(220px, calc(15vh - 40px)); opacity: 0.7; }
   5%    { transform: translate(200px, calc(15vh - 80px)); }
   10%   { transform: translate(180px, calc(15vh - 130px)); }
   15%   { transform: translate(160px, calc(15vh - 180px)); }

@@ -7,7 +7,7 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.5);
-    z-index: 1000;
+    z-index: 2;
 }
 
 
@@ -55,6 +55,7 @@
     max-width: 15rem;
     margin-left: 24%;
     margin-top: 1rem;
+    z-index: 3;
   }
 
   .load-container{
