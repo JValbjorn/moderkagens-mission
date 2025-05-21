@@ -51,6 +51,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
       //window.event = event; //prøver at linke til event i point-counter...I guess?
         addPoint();
+        lommeregner();
 
       icon.remove();
       usedPositions = usedPositions.filter(p => p !== pos);
