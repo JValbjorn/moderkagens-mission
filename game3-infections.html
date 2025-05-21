@@ -16,13 +16,11 @@
     <main id="main-content">
       <div class="blue-cornors">
         <div class="home-btn">
-          <a href="index.html">
-            <img
-              src="media/img/icons/back-to-home-white.png"
-              alt="Back-2-Home"
-              class="home"
-            />
-          </a>
+          <img
+          src="media/img/icons/back-to-home-white.png"
+          alt="Back-2-Home"
+          class="home"
+        />
         </div>
         <div class="timer-cornor">
           <p class="timer" data-redirect="game3-infections.html">0:45</p>
@@ -54,7 +52,7 @@
           <h1>Beskyt Babyen!</h1>
           <p>Viriusser er på vej og kan give infektioner!</p>
           <p>Beskyt babyen ved at trykke dem væk!</p>
-          
+
           <figure class="gif-exp-container">
             <img
               src="media/video/gif/gif-stage3.gif"
@@ -69,20 +67,23 @@
         </div>
       </div>
 
-      
       <div class="congrats" id="congrats">
         <div class="congrats-content" id="congrats-content">
           <h1>Godt gået!</h1>
-          <p>Du styrede ernæringen, sendte affaldstoffer ud OG slog virusser ned!</p>
+          <p>
+            Du styrede ernæringen, sendte affaldstoffer ud OG slog virusser ned!
+          </p>
           <figure class="load-container">
-            <img class="load-img" src="media/img/knapper/progress-template.png" alt="loade cirkel">
+            <img
+              class="load-img"
+              src="media/img/knapper/progress-template.png"
+              alt="loade cirkel"
+            />
           </figure>
           <button id="congrats-btn" onclick="endings()">Okay!</button>
           
         </div>
       </div>
-
-
 
       <section id="waste-container">
         <!-- Affaldsstof-ikoner tilføjes dynamisk med JS -->
@@ -91,6 +92,16 @@
       <section id="virus-container">
         <!-- virus-ikoner tilføjes dynamisk med JS -->
       </section>
+
+      <div id="confirm-box" class="confirm-box">
+        <div id="confirm-home" class="confirm-home">
+          <h1>Er du sikker på at du vil forlade spillet?!</h1>
+          <div class="b2home-btn">
+            <button id="exit">Ja</button>
+            <button id="stay">Nej!</button>
+          </div>
+        </div>
+      </div>
     </main>
     <script src="js/localStorage.js"></script>
     <script src="js/pointCounter.js"></script>
@@ -99,9 +110,10 @@
     <script src="js/wasteMovement.js"></script>
     <script src="js/popUpInfoWindow.js"></script>
     <script src="js/congrats.js"></script>
-    <script src="js/timer.js"></script> 
+    <script src="js/timer.js"></script>
     <script src="js/virusMovement.js"></script>
+    <script src="js/gameState.js"></script>
+    <script src="js/backToHome.js"></script>
     <script src="js/introVideo.js"></script>
-    <script src="js/gameState.js"></script>  
   </body>
 </html>

@@ -38,6 +38,56 @@ a {
     justify-content: space-between;
 }
 
+.confirm-home {
+ background-color: #fff;
+ z-index: 1001;
+   width: 30rem;
+    height: 15rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#exit, #stay {
+    display: flex;
+    border-color: #29abe2;
+    color: #fff;
+    font-size: 1.5rem;
+    background-color: #29abe2; 
+    border-radius: 23px;
+    padding: 0.7rem;
+    min-width: 8rem;
+   column-gap: 3rem;
+
+    text-align: center;
+}
+
+.b2home-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.confirm-box {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Dimmed background */
+    padding: 1rem;
+   
+}
+
+
 .blod-baner {
     width: 100%;
     height: auto;

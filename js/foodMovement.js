@@ -21,6 +21,7 @@ const madIkoner = [
   { src: "media/img/food-items/coffee.png", type: "bad" },
 ];
 
+
 function generateFoodIcon() {
   if (gamePaused) {
     return;
@@ -51,6 +52,7 @@ function generateFoodIcon() {
     // Play plop sound
     plopSound.currentTime = 0;
     plopSound.play();
+
 
     //window.event = event; //prøver at linke til event i point-counter...I guess?
     addPoint();
