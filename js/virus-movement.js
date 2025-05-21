@@ -3,9 +3,9 @@
 const virusContainer = document.getElementById("virus-container")
 
 const virusIkoner = [
-    { src: "media/img/virus/herpes.png", type: "virus" },
-    { src: "media/img/virus/estreptococo.png", type: "virus" },
-    { src: "media/img/virus/papiloma.png", type: "virus" },
+    { src: "../media/img/virus/herpes.png", type: "virus" },
+    { src: "../media/img/virus/estreptococo.png", type: "virus" },
+    { src: "../media/img/virus/papiloma.png", type: "virus" },
 ]; 
 
 const spawnPositions = [
