@@ -1,7 +1,7 @@
 "use strict";
 
 const hitSound = new Audio("media/audio/plop.mp3");
-const damageSound = new Audio("media/audio/dmg1.mp3");
+const damageSound = new Audio("media/audio/dmg2.mp3");
 
 const virusContainer = document.getElementById("virus-container");
 // Virus icon data

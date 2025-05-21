@@ -20,6 +20,7 @@
 
      window.onload = function (){
       underwaterSound.currentTime = 0;
+      underwaterSound.volume = 0.3; // Value from 0.0 (silent) to 1.0 (full volume)
       underwaterSound.play();
     }
 
