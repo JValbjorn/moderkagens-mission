@@ -84,6 +84,7 @@ object-fit: none; */
 }
 
 .prog-doughnuts{
+    opacity: 0;
 border-right: solid #fff 0.3em;
 margin-right: 1rem; 
 height: 10rem;
@@ -171,16 +172,20 @@ h3 {
 
 
 .progress-container {
+    position: fixed;
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 4.75rem;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  left: 38%;
+    top: 24%;
 }
 
 .circle-progress {
-  width: 100px;
-  height: 100px;
+  width: 8rem;
+  height: 8rem;
   text-align: center;
   font-family: sans-serif;
 }
@@ -199,7 +204,7 @@ svg {
 
 .progress {
   fill: none;
-  stroke: #4caf50; /* grøn – skift for "bad"/"waste" */
+  stroke: #dd7ac8; /* grøn – skift for "bad"/"waste" */
   stroke-width: 3;
   stroke-dasharray: 100; /*før 0, 100*/
   stroke-dashoffset: 100; /*før 25*/
@@ -208,7 +213,7 @@ svg {
 }
 
 .percentage {
-  fill: #333;
+  fill: #ffffff;
   font-size: 0.5rem;
   text-anchor: middle;
   dominant-baseline: middle;
