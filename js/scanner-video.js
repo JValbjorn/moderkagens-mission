@@ -12,5 +12,5 @@
     });
 
     scannerVideo.addEventListener('ended', () => {
-      window.location.href = 'game1-food.html'; // Udskift med din mål-side
+      window.location.href = 'intro-video.html'; // Udskift med din mål-side
     });
