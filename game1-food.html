@@ -13,13 +13,11 @@
     <main id="main-content">
       <div class="blue-cornors">
         <div class="home-btn">
-          <a href="index.html">
-            <img
-              src="media/img/icons/back-to-home-white.png"
-              alt="Back-2-Home"
-              class="home"
-            />
-          </a>
+          <img
+            src="media/img/icons/back-to-home-white.png"
+            alt="Back-2-Home"
+            class="home"
+          />
         </div>
         <div class="timer-cornor">
           <p class="timer" data-redirect="game2-organic-waste.html">0:45</p>
@@ -66,6 +64,16 @@
           </div>
         </div>
       </div>
+
+      <div id="confirm-box" class="confirm-box">
+        <div id="confirm-home" class="confirm-home">
+          <h1>Er du sikker på at du vil forlade spillet?!</h1>
+          <div class="b2home-btn">
+            <button id="exit">Ja</button>
+            <button id="stay">Nej!</button>
+          </div>
+        </div>
+      </div>
     </main>
     <script src="js/localStorage.js"></script>
     <script src="js/pointCounter.js"></script>
@@ -74,5 +82,6 @@
     <script src="js/timer.js"></script>
     <script src="js/scores.js"></script>
     <script src="js/gameState.js"></script>
+    <script src="js/backToHome.js"></script>
   </body>
 </html>
