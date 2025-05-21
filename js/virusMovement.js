@@ -1,5 +1,8 @@
 "use strict";
-// Get the virus container
+
+const hitSound = new Audio("media/audio/plop.mp3");
+const damageSound = new Audio("media/audio/dmg1.mp3");
+
 const virusContainer = document.getElementById("virus-container");
 // Virus icon data
 const virusIkoner = [
@@ -70,6 +73,8 @@ function spawnVirusIcon() {
 
   // Add click handler to remove virus when clicked
   img.addEventListener("click", function () {
+    hitSound.currentTime = 0;
+    hitSound.play();
     // Remove instantly when clicked
     img.remove();
     addPoint();
@@ -90,6 +95,8 @@ function spawnVirusIcon() {
     // Only trigger damage if the virus is still in the DOM and hasn't been clicked
     if (img.parentNode === virusContainer && img.dataset.hit === "false") {
       img.dataset.hit = "true"; // Mark as hit
+      damageSound.currentTime = 0;
+      damageSound.play();
 
       // Trigger damage flash
       triggerDamageFlash();

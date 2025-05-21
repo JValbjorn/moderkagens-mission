@@ -1,6 +1,6 @@
 "use strict";
 
-const popSound = new Audio("media/audio/pop.mp3");
+const popSound = new Audio("media/audio/waste1.mp3");
 const wasteContainer = document.getElementById("waste-container");
 
 const wasteIcons = [
