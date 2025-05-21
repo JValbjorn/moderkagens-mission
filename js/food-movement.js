@@ -22,10 +22,7 @@ const madIkoner = [
 ];
 
 function genererMadikon() {
-    // totalIconsGenerated++;
-    // saveGeneratedCount();
-    // updateScoreDisplay();
-
+    
     const ikonData = madIkoner[Math.floor(Math.random() * madIkoner.length)];
 
        // 👉 Her tæller vi hvor mange gange hver type er blevet vist
@@ -48,9 +45,9 @@ function genererMadikon() {
     });
 
     img.addEventListener("click", () => {
-    //       // Play plop sound
-    // plopSound.currentTime = 0;
-    // plopSound.play();
+          // Play plop sound
+    plopSound.currentTime = 0;
+    plopSound.play();
 
     
     //window.event = event; //prøver at linke til event i point-counter...I guess?

@@ -44,7 +44,7 @@ body {
   text-align: center;
 }
 
-a {
+a, button {
   text-decoration: none;
   color: white;
   font-size: 2rem;
