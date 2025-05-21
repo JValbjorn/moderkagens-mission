@@ -30,10 +30,29 @@ function badLom(){
 function wasteLom(){
     let waste =scoreArray.filter(produkt =>produkt.type.includes("waste"));
     let wastetal = waste.reduce((sum, ele) => sum + ele.quantity, 0);
-    let limit = 15;
-    let wasteProcent = wastetal / limit*100;
+    // let limit = 15;
+    // let wasteProcent = wastetal / limit*100;
+    let wasteT = Object.keys(generatedCount)
+        .filter(key => key === "waste")
+        .reduce((sum, key) => sum + generatedCount[key], 0);
+
+    let wasteProcent = wastetal / wasteT *100;
     console.log(wasteProcent);
     updateCircularProgress("waste", wasteProcent);
+}
+
+function virusLom(){
+    let virus = scoreArray.filter(produkt =>produkt.type.includes("virus"));
+    let virustal = virus.reduce((sum, ele) => sum + ele.quantity, 0);
+
+    let virusT = Object.keys(generatedCount)
+        .filter(key => key === "virus")
+        .reduce((sum, key) => sum + generatedCount[key], 0);
+
+    let virusProcent = virustal / virusT *100;
+    console.log(virusProcent);
+    updateCircularProgress("virus", virusProcent);
+
 }
 
 // const classicProdukter = cart.filter(produkt =>produkt.type.includes("classic"));

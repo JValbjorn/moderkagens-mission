@@ -70,6 +70,7 @@ function spawnVirusIcon() {
   img.style.left = spawn.x + "px";
   img.style.top = "-100px"; // Start above the screen
   img.dataset.hit = "false"; // Flag to track if this virus has already hit the baby
+  img.dataset.type = ikonData.type; //local storage, identificering af type
 
   // Add click handler to remove virus when clicked
   img.addEventListener("click", function () {
@@ -78,6 +79,7 @@ function spawnVirusIcon() {
     // Remove instantly when clicked
     img.remove();
     addPoint();
+    virusLom();
     
   });
 
