@@ -2,6 +2,7 @@
 
 const popUp = document.getElementById("pop-up");
 const span = document.getElementById("close");
+let stage = 1;
 
 window.addEventListener("DOMContentLoaded", () => {
     popUp.style.display = "block";
@@ -9,22 +10,26 @@ window.addEventListener("DOMContentLoaded", () => {
 
 window.onclick = (event) => {
     if (event.target === popUp) {
-        popUp.style.display = "none";
-
-        // Start timer when clicking outside popup
-        const display = document.querySelector(".timer");
-        const duration = 45; 
-        const redirectUrl = display.dataset.redirect;
-        startTimer(duration, display, redirectUrl);
+        startGame();
     }
 };
 
 span.onclick = () => {
-    popUp.style.display = "none";
-
-    // Start timer when clicking "Det er forstået!"
-    const display = document.querySelector(".timer");
-    const duration = 45; 
-    const redirectUrl = display.dataset.redirect;
-    startTimer(duration, display, redirectUrl);
+    startGame();
 };
+
+function startGame() {
+    popUp.style.display = "none";
+    stage = +popUp.dataset.stage
+    gamePaused = false;
+    startCountdown();
+    startFoodMovement();
+
+    if (stage > 1) {
+        startWasteSpawn();
+    }
+
+    if (stage > 2) {
+        startVirusSpawn();
+    }
+}

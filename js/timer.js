@@ -6,7 +6,11 @@ let timerInterval;
 
 const countdownEl = document.querySelector(".timer"); // Henter <p class="timer">
 
-// const countdownInterval = setInterval(updateCountdown, 1000);
+let countdownInterval;
+
+function startCountdown() {
+  countdownInterval = setInterval(updateCountdown, 1000);
+}
 
 function updateCountdown() {
   const minutter = Math.floor(tid / 60);
@@ -20,13 +24,14 @@ function updateCountdown() {
   if (tid < 0) {
     clearInterval(countdownInterval);
     countdownEl.textContent = "0:00";
+    finishGameState();
     const redirectUrl = countdownEl.dataset.redirect || "default-page.html";
     window.location.href = redirectUrl; 
   }
 } 
 
 function showMessage(msg) {
-  alert(msg); // Du kan ændre denne til noget pænere senere
+  alert(msg); 
 }
 
 function disableKeyboard() {
@@ -35,18 +40,4 @@ function disableKeyboard() {
   };
 }
 
-function startTimer(duration, display, redirectUrl) {
-  let timer = duration;
-  timerInterval = setInterval(() => {
-      const minutes = Math.floor(timer / 60);
-      const seconds = timer % 60;
-      display.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-      if (--timer < 0) {
-          clearInterval(timerInterval);
-          if (redirectUrl) {
-              window.location.href = redirectUrl;
-          }
-      }
-  }, 1000);
-}
 

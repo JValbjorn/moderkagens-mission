@@ -1,68 +1,72 @@
-"use strict"
+"use strict";
 
 const plopSound = new Audio("media/audio/plop.mp3");
 
 const madIkoner = [
-    { src: "media/img/food-items/blueberry.png", type: "good" }, 
-    { src: "media/img/food-items/banana.png", type: "good" },
-    { src: "media/img/food-items/avcado.png", type: "good" },
-    { src: "media/img/food-items/carrot.png", type: "good" },
-    { src: "media/img/food-items/fried-egg.png", type: "good" },
-    { src: "media/img/food-items/salmon.png", type: "good" },
-    { src: "media/img/food-items/strawberry.png", type: "good" },
-    { src: "media/img/food-items/water.png", type: "good" },
-    { src: "media/img/food-items/blue-donut.png", type: "bad" },
-    { src: "media/img/food-items/wine.png", type: "bad" },
-    { src: "media/img/food-items/fries.png", type: "bad" },
-    { src: "media/img/food-items/pizza.png", type: "bad" },
-    { src: "media/img/food-items/pink-donut.png", type: "bad" },
-    { src: "media/img/food-items/lakrids.png", type: "bad" },
-    { src: "media/img/food-items/ginger.png", type: "bad" },
-    { src: "media/img/food-items/coffee.png", type: "bad" },
+  { src: "media/img/food-items/blueberry.png", type: "good" },
+  { src: "media/img/food-items/banana.png", type: "good" },
+  { src: "media/img/food-items/avcado.png", type: "good" },
+  { src: "media/img/food-items/carrot.png", type: "good" },
+  { src: "media/img/food-items/fried-egg.png", type: "good" },
+  { src: "media/img/food-items/salmon.png", type: "good" },
+  { src: "media/img/food-items/strawberry.png", type: "good" },
+  { src: "media/img/food-items/water.png", type: "good" },
+  { src: "media/img/food-items/blue-donut.png", type: "bad" },
+  { src: "media/img/food-items/wine.png", type: "bad" },
+  { src: "media/img/food-items/fries.png", type: "bad" },
+  { src: "media/img/food-items/pizza.png", type: "bad" },
+  { src: "media/img/food-items/pink-donut.png", type: "bad" },
+  { src: "media/img/food-items/lakrids.png", type: "bad" },
+  { src: "media/img/food-items/ginger.png", type: "bad" },
+  { src: "media/img/food-items/coffee.png", type: "bad" },
 ];
 
-function genererMadikon() {
-    
-    const ikonData = madIkoner[Math.floor(Math.random() * madIkoner.length)];
+function generateFoodIcon() {
+  if (gamePaused) {
+    return;
+  }
 
-       // 👉 Her tæller vi hvor mange gange hver type er blevet vist
-    if (generatedCount[ikonData.type] !== undefined) {
-        generatedCount[ikonData.type]++;
-        saveGeneratedCount();
-        updateScoreDisplay(); // hvis du vil opdatere scoren live
+  const ikonData = madIkoner[Math.floor(Math.random() * madIkoner.length)];
+
+  // 👉 Her tæller vi hvor mange gange hver type er blevet vist
+  if (generatedCount[ikonData.type] !== undefined) {
+    generatedCount[ikonData.type]++;
+    saveGeneratedCount();
+    updateScoreDisplay(); // hvis du vil opdatere scoren live
+  }
+
+  const img = document.createElement("img");
+  img.src = ikonData.src;
+  img.classList.add("food-icon");
+  img.dataset.type = ikonData.type;
+
+  // Remove icon after animation ends (the movement animation)
+  img.addEventListener("animationend", (e) => {
+    if (e.animationName === "curveDown") {
+      img.remove();
     }
+  });
 
-    const img = document.createElement("img");
-    img.src = ikonData.src;
-    img.classList.add("food-icon");
-    img.dataset.type = ikonData.type;
-
-    // Remove icon after animation ends (the movement animation)
-    img.addEventListener("animationend", (e) => {
-        if (e.animationName === "curveDown") {
-            img.remove();
-        }
-    });
-
-    img.addEventListener("click", () => {
-          // Play plop sound
+  img.addEventListener("click", () => {
+    // Play plop sound
     plopSound.currentTime = 0;
     plopSound.play();
 
-    
     //window.event = event; //prøver at linke til event i point-counter...I guess?
-        addPoint();
-        goodLom();
-        badLom();
-        img.remove();
-    });
+    addPoint();
+    goodLom();
+    badLom();
+    img.remove();
+  });
 
-    document.querySelector(".blodbane-left").appendChild(img);
+  document.querySelector(".blodbane-left").appendChild(img);
 }
 
-
 // Justeret til 3 sekunder (3000ms)
-const spawnInterval = setInterval(genererMadikon, 1000);
+// const spawnInterval = setInterval(genererMadikon, 1000);
 
+let spawnInterval;
 
-
+function startFoodMovement() {
+  spawnInterval = setInterval(generateFoodIcon, 1000);
+}
