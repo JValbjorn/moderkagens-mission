@@ -11,11 +11,11 @@ window.addEventListener("DOMContentLoaded", () => {
   ];
 
   const spawnPositions = [
-    { x: 160, y: 1075 },
-    { x: 300, y: 1020 },
-    { x: 500, y: 1000 },
-    { x: 650, y: 1033 },
-    { x: 800, y: 1150 }
+    { x: 160, y: 1200 },
+    { x: 300, y: 1140 },
+    { x: 500, y: 1100 },
+    { x: 650, y: 1133 },
+    { x: 800, y: 1250 }
   ];
 
   let usedPositions = [];
