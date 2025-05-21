@@ -52,6 +52,8 @@ function genererMadikon() {
     
     //window.event = event; //prøver at linke til event i point-counter...I guess?
         addPoint();
+        goodLom();
+        badLom();
         img.remove();
     });
 

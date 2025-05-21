@@ -3,6 +3,19 @@
     document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('intro-video');
     const videoContainer = document.getElementById('video-container');
+
+    const sellectSound = new Audio("media/audio/sellect.mp3");
+
+    // Find alle knapper med klassen 'front-btns'
+    const frontButtons = document.querySelectorAll('.front-btns');
+
+    // Tilføj klik-lyd til hver knap
+    frontButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            sellectSound.currentTime = 0; // Spol lyden tilbage, hvis den allerede spiller
+            sellectSound.play();
+        });
+    });
     
             
     // When video ends, remove the video container and show main content
@@ -13,6 +26,6 @@
     });
             
  
-    });
+    }); 
     
     

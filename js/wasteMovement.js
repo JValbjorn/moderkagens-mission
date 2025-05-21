@@ -39,6 +39,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const icon = document.createElement("img");
     icon.src = randomWaste.src;
     icon.classList.add("waste-icon");
+    icon.dataset.type = randomWaste.type;
 
     icon.style.position = "absolute";
     icon.style.left = `${pos.x}px`;
@@ -51,7 +52,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
       //window.event = event; //prøver at linke til event i point-counter...I guess?
         addPoint();
-        lommeregner();
+        
+        wasteLom();
 
       icon.remove();
       usedPositions = usedPositions.filter(p => p !== pos);
