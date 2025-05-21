@@ -1,6 +1,6 @@
 "use strict";
 
-const plopSound = new Audio("media/audio/plop.mp3");
+const plopSound = new Audio("media/audio/pop.mp3");
 
 const madIkoner = [
   { src: "media/img/food-items/blueberry.png", type: "good" },
