@@ -5,6 +5,7 @@
     const videoContainer = document.getElementById('video-container');
 
     const sellectSound = new Audio("media/audio/sellect.mp3");
+    const underwaterSound = new Audio("media/audio/underwater-ambience.mp3");
 
     // Find alle knapper med klassen 'front-btns'
     const frontButtons = document.querySelectorAll('.front-btns');
@@ -16,6 +17,12 @@
             sellectSound.play();
         });
     });
+
+     window.onload = function (){
+      underwaterSound.currentTime = 0;
+      underwaterSound.play();
+    }
+
     
             
     // When video ends, remove the video container and show main content

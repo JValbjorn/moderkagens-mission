@@ -6,6 +6,7 @@
     const startScreen = document.getElementById('forside-ui');
 
     const sellectSound = new Audio("media/audio/sellect.mp3");
+    const hospitalSound = new Audio("media/audio/hospital.mp3");
 
     // Find alle knapper med klassen 'front-btns'
     const frontButtons = document.querySelectorAll('.front-btns');
@@ -17,6 +18,12 @@
             sellectSound.play();
         });
     });
+
+    window.onload = function (){
+      hospitalSound.currentTime = 0;
+      hospitalSound.play();
+    }
+
 
     playBtn.addEventListener('click', () => {
       videoOverlay.style.display = 'flex';
