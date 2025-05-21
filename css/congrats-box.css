@@ -45,7 +45,8 @@
     font-size: 1.3rem;
   }
 
-  button {
+  #congrats-btn {
+    position: relative;
     color: #fff;
     font-size: 1.5rem;
     font-weight: bold;
