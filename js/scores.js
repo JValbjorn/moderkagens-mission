@@ -52,7 +52,26 @@ function updateCircularProgress(type, procent) {
 
     procent = Math.min(100, Math.max(0, procent));
 
-    const dashArray = (procent / 100) * 100;
-    circle.setAttribute("stroke-dasharray", `${dashArray}, 100`);
+    const radius = 15.9155; // svarer til din path-radius
+    const circumference = 2 * Math.PI * radius;
+
+    const offset = circumference * (1 - procent / 100);
+
+    circle.style.strokeDasharray = `${circumference}`;
+    circle.style.strokeDashoffset = `${offset}`;
+
     text.textContent = `${Math.round(procent)}%`;
 }
+
+
+
+window.addEventListener('DOMContentLoaded', function () {
+    loadPointsFromLocalStorage();
+    loadGeneratedCount();
+
+    // Opdater cirkler direkte baseret på localStorage
+    goodLom();
+    badLom();
+    wasteLom();
+});
+
