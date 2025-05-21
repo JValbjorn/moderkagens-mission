@@ -1,11 +1,12 @@
 "use strict";
 
-const startTid = 5; // 45 sekunder
+const startTid = 45; // 45 sekunder
 let tid = startTid;
+let timerInterval;
 
 const countdownEl = document.querySelector(".timer"); // Henter <p class="timer">
 
-const countdownInterval = setInterval(updateCountdown, 1000);
+// const countdownInterval = setInterval(updateCountdown, 1000);
 
 function updateCountdown() {
   const minutter = Math.floor(tid / 60);
@@ -33,3 +34,19 @@ function disableKeyboard() {
     return false;
   };
 }
+
+function startTimer(duration, display, redirectUrl) {
+  let timer = duration;
+  timerInterval = setInterval(() => {
+      const minutes = Math.floor(timer / 60);
+      const seconds = timer % 60;
+      display.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+      if (--timer < 0) {
+          clearInterval(timerInterval);
+          if (redirectUrl) {
+              window.location.href = redirectUrl;
+          }
+      }
+  }, 1000);
+}
+
