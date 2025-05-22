@@ -13,17 +13,17 @@ function startCountdown() {
 }
 
 function updateCountdown() {
-  const minutter = Math.floor(tid / 60);
+  // const minutter = Math.floor(tid / 60);
   let sekunder = tid % 60;
 
   sekunder = sekunder < 10 ? "0" + sekunder : sekunder;
 
-  countdownEl.textContent = `${minutter}:${sekunder}`;
+  countdownEl.textContent = `${sekunder}`; // tidligere${minutter}:${sekunder}
   tid--;
 
   if (tid < 0) {
     clearInterval(countdownInterval);
-    countdownEl.textContent = "0:00";
+    countdownEl.textContent = "0"; //"0:00"
     finishGameState();
     if (stage < 3) {
       const redirectUrl = countdownEl.dataset.redirect || "default-page.html";
