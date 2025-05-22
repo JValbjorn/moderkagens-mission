@@ -10,17 +10,14 @@ body {
   margin-left: 12%;
   margin-right: auto;
   margin-top: 6rem;
-
   width: 75%;
   height: auto;
 }
 
 .mom {
   margin: 3% 21%;
-
   position: absolute;
   display: inline-block;
-
   width: 60%;
   height: auto;
 }
@@ -29,7 +26,6 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 4rem;
-
   position: absolute;
   z-index: 10;
   top: 56%;
@@ -39,22 +35,18 @@ body {
 .front-btns {
   background-color: #34719d;
   padding: 2rem 1.5rem;
-
   border-radius: 50% 5%;
   text-align: center;
 }
 
 a, button {
-  font-family: 'SourceCodeVariable'; /* Give your font a name */
-  
+  font-family: 'SourceCodeVariable'; 
   font-weight: normal;
   font-style: normal;
   text-decoration: none;
   color: white;
   font-size: 2rem;
 }
-
-
 
 #scanner-container {
       position: fixed;
