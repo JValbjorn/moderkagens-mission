@@ -2,6 +2,7 @@
 let gfProcent = 0;
 let bfProcent = 0;
 let wasteProcent = 0;
+let virusProcent = 0;
 
 function goodLom(){
     let gf = scoreArray.filter(produkt =>produkt.type.includes("good"));

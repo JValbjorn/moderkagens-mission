@@ -16,26 +16,25 @@ window.addEventListener('DOMContentLoaded', function () {
 
 function endings(){
     console.log("Du har trykket på KNAPPEN!");
-     let samletScore = 0;
-     let gennemsnit = 0;
+    let samletScore = 0;
+    let gennemsnit = 0;
 
     setTimeout(() => {
-         samletScore = gfProcent + bfProcent + wasteProcent;
-         gennemsnit = samletScore/3;
+        samletScore = gfProcent + virusProcent + wasteProcent;
+        gennemsnit = samletScore / 3;
+
         console.log("gennemsnittet er", gennemsnit);
         console.log("Samlet score:", samletScore);
+
+        if (gennemsnit > 90) {
+            window.location.href = 'game-end1.html';
+        } 
+        else if (gennemsnit <= 90 && gennemsnit > 69) {
+            window.location.href = 'game-end2.html';
+        } 
+        else if (gennemsnit <= 69) {
+            window.location.href = 'game-end3.html';
+        }
     }, 100); // Vent lidt for at sikre alle funktioner er færdige
-
-    if(gennemsnit > 90){
-       window.location.href = 'game-end1.html';
-    }
-
-    else if(90 > gennemsnit > 69){
-        window.location.href = 'game-end2.html';
-    }
-
-    else{
-        window.location.href = 'game-end3.html';
-    }
-
 }
+
