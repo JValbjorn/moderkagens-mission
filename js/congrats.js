@@ -1,23 +1,30 @@
 "use strict";
 
 
-// 
+// sørger for html'en er indlæst før funktionerne inden i kaldes
 
 window.addEventListener('DOMContentLoaded', function () {
    loadPointsFromLocalStorage();
     loadGeneratedCount();
+//henter de to local storages
 
+
+//aktivere de fire funktioner, der beregner procenttallet
     goodLom();
     badLom();
     wasteLom();
+    virusLom();
 });
 
-
+//funktionen samler de tre (ud af de fire) procenttal fra ...Lom()'erne
+//herefter findes gennemsnittet og via if-statements vurderes hvilken html-side man skal videre til
 function endings(){
     console.log("Du har trykket på KNAPPEN!");
     let samletScore = 0;
     let gennemsnit = 0;
 
+
+//setTimeout sørger for at vente 100 milisekeunder, før alt det inde i den eksikveres
     setTimeout(() => {
         samletScore = gfProcent + virusProcent + wasteProcent;
         gennemsnit = samletScore / 3;

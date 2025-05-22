@@ -45,6 +45,10 @@ body {
 }
 
 a, button {
+  font-family: 'SourceCodeVariable'; /* Give your font a name */
+  src: url('../media/fonts/source-codevariable.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
   text-decoration: none;
   color: white;
   font-size: 2rem;

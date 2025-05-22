@@ -20,12 +20,15 @@ body {
 }
 
 .timer {
+  position: relative;
+  left: 1rem;
   height: 2.36em;
   width: auto;
   margin: 2rem 3rem;
 
   color: white;
   font-size: 3rem;
+  font-weight: bolder;
 }
 
 .baby-game {
