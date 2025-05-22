@@ -31,7 +31,7 @@ function endings(){
         else if (gennemsnit <= 90 && gennemsnit > 69) {
             window.location.href = 'game-end2.html';
         } 
-        else if (gennemsnit <= 69) {
+        else if (gennemsnit <= 69 || isNaN(gennemsnit)) {
             window.location.href = 'game-end3.html';
         }
     }, 100); // Vent lidt for at sikre alle funktioner er færdige
