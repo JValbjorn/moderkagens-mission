@@ -43,13 +43,11 @@ function triggerDamageFlash() {
   setTimeout(() => {
     flashElement.remove();
   }, 300);
-}
+} 
 
 // function der spawner virus
 function spawnVirusIcon() {
-  if (gamePaused) {
-    return;
-  }
+  
   // vælger et random virusikon og spawner denne 
   const ikonData = virusIkoner[Math.floor(Math.random() * virusIkoner.length)];
 
