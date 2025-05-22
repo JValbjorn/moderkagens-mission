@@ -1,14 +1,16 @@
 "use strict";
 
-const popSound = new Audio("media/audio/pop2.mp3");
+const popSound = new Audio("media/audio/pop2.mp3"); // Sætter lyden op til senere brug 
 const wasteContainer = document.getElementById("waste-container");
 
+/* alle waste-ikonerne bliver her puttet ind i et object-array */
 const wasteIcons = [
   { src: "media/img/affaldsstoffer/waste-orange.png", type: "waste" },
   { src: "media/img/affaldsstoffer/waste-pink.png", type: "waste" },
   { src: "media/img/affaldsstoffer/waste-yellow.png", type: "waste" },
 ];
 
+/* Indstiller de forskellige positioner, hvor ikonerne kan spawne */
 const wasteSpawnPositions = [
   { x: 160, y: 1200 },
   { x: 300, y: 1140 },
@@ -19,6 +21,9 @@ const wasteSpawnPositions = [
 
 let usedPositions = [];
 
+// I denne function spawner et waste-ikon på en tilfældig, ledig position.
+// Når ikonet klikkes, gives der point, lyden afspilles, og ikonet animeres ud af skærmen.
+// Sørger for at positioner ikke genbruges, før de er ledige igen.
 function spawnWasteIcon() {
   if (gamePaused) {
     return;
@@ -39,7 +44,7 @@ function spawnWasteIcon() {
   if (generatedCount[randomWaste.type] !== undefined) {
     generatedCount[randomWaste.type]++;
     saveGeneratedCount();
-    updateScoreDisplay(); // hvis du vil opdatere scoren live
+    updateScoreDisplay(); 
   }
 
   const icon = document.createElement("img");
