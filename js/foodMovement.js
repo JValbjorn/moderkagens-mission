@@ -1,7 +1,8 @@
 "use strict";
 
-const plopSound = new Audio("media/audio/pop.mp3");
+const plopSound = new Audio("media/audio/pop.mp3"); /* sætter lyden op til senere brug*/
 
+/* alle mad-ikonerne bliver her puttet ind i et object-array */
 const madIkoner = [
   { src: "media/img/food-items/blueberry.png", type: "good" },
   { src: "media/img/food-items/banana.png", type: "good" },
@@ -29,11 +30,11 @@ function generateFoodIcon() {
 
   const ikonData = madIkoner[Math.floor(Math.random() * madIkoner.length)];
 
-  // 👉 Her tæller vi hvor mange gange hver type er blevet vist
+  // Her tæller vi hvor mange gange hver type er blevet vist
   if (generatedCount[ikonData.type] !== undefined) {
     generatedCount[ikonData.type]++;
     saveGeneratedCount();
-    updateScoreDisplay(); // hvis du vil opdatere scoren live
+    updateScoreDisplay(); 
   }
 
   const img = document.createElement("img");
@@ -41,7 +42,7 @@ function generateFoodIcon() {
   img.classList.add("food-icon");
   img.dataset.type = ikonData.type;
 
-  // Remove icon after animation ends (the movement animation)
+  
   img.addEventListener("animationend", (e) => {
     if (e.animationName === "curveDown") {
       img.remove();
@@ -49,7 +50,7 @@ function generateFoodIcon() {
   });
 
   img.addEventListener("click", () => {
-    // Play plop sound
+    // afspiller lyden
     plopSound.currentTime = 0;
     plopSound.play();
 
@@ -63,9 +64,6 @@ function generateFoodIcon() {
 
   document.querySelector(".blodbane-left").appendChild(img);
 }
-
-// Justeret til 3 sekunder (3000ms)
-// const spawnInterval = setInterval(genererMadikon, 1000);
 
 let spawnInterval;
 

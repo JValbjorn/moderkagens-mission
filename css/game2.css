@@ -1,5 +1,6 @@
+/* Stage 2 spil interaktive del   */
 .waste-container {
-    position: relative;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -10,29 +11,27 @@
 .waste-icon {
   position: absolute;
   width: 90px;
-  pointer-events: auto;
+  pointer-events: auto; /* så de kan klikkes på */ 
   animation: upDown 2.5s ease-in-out infinite;
   z-index: 200;
-   /* Fade-in effect when it appears */
   opacity: 0;
   animation: fadeIn 1.5s ease forwards, upDown 2.5s ease-in-out infinite;
-
-  
 } 
 
-
+/* svævende animation, op og ned */
 @keyframes upDown {
   0%   { transform: translateY(0); }
   50%  { transform: translateY(-30px); }
   100% { transform: translateY(0); }
 }
 
+/* fade-in animation */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-
+/* Alle disse keyframes sikrer en smooth buet animation af affaldsstofferne når de 'udskilles'  */
 @keyframes slideOut {
   0%    { transform: translate(220px, calc(15vh - 40px)); opacity: 0.7; }
   5%    { transform: translate(200px, calc(15vh - 80px)); }

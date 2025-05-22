@@ -56,7 +56,6 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 8px;
-
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -90,7 +89,7 @@ a {
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Dimmed background */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
    
 }
@@ -99,7 +98,6 @@ a {
 .blod-baner {
     width: 100%;
     height: auto;
-
     position: absolute;
     display: inline-block;
 }
