@@ -8,11 +8,11 @@ window.addEventListener("DOMContentLoaded", () => {
     popUp.style.display = "block";
 });
 
-window.onclick = (event) => {
-    if (event.target === popUp) {
-        startGame();
-    }
-};
+// window.onclick = (event) => {
+//     if (event.target === popUp) {
+//         startGame();
+//     }
+// };
 
 span.onclick = () => {
     startGame();
