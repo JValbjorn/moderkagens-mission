@@ -37,7 +37,8 @@ function updateUIFromCart() {
    
     console.log("updateUI");
 }
-//total counter til at beregne scores
+//laver en array. Denne array skal bruges til at holde overblik over
+//  hvor mange af hver slags der er blevet genereret 
 let generatedCount = {
     good: 0,
     bad: 0,
@@ -45,10 +46,12 @@ let generatedCount = {
     virus: 0
 };
 
+//gemmer array'et i local storage
 function saveGeneratedCount() {
     localStorage.setItem("generatedCount", JSON.stringify(generatedCount));
 }
 
+//henter array'et i local storage
 function loadGeneratedCount() {
     const stored = localStorage.getItem("generatedCount");
     if (stored) {
@@ -57,30 +60,33 @@ function loadGeneratedCount() {
 }
 
 
-
+//gør dataerne til en type de andre funktioner kan bruge
 function updateScoreDisplay() {
     scoreArray.forEach(item => {
         const type = item.type;
         const clicked = item.quantity;
         const shown = generatedCount[type] || 0;
 
-        const el = document.getElementById(`score-${type}`);
-        if (el) {
+
+        //Dette bruges ikke længere, da vi har tilføjet progrssions cirkler
+        // const el = document.getElementById(`score-${type}`);
+        // if (el) {
             
-            el.textContent = `${type.charAt(0).toUpperCase() + type.slice(1)}: ${clicked} / ${shown}`;
-        }
+        //     el.textContent = `${type.charAt(0).toUpperCase() + type.slice(1)}: ${clicked} / ${shown}`;
+        // }
         // console.log(`${type.charAt(0).toUpperCase() + type.slice(1)}: ${clicked} / ${shown}`);
     });
 }
 
-
+//nulstiller antallet og totalen(total='quantity'*'value',som vi ikke bruger alligevel)
+//i scoreArray
 function resetPointSystem() {
     scoreArray.forEach(micro => {
         micro.quantity = 0;
         micro.total = 0;
 
         Object.keys(generatedCount).forEach(type => {
-            generatedCount[type] = 0;
+            generatedCount[type] = 0; //nulstiller array'et generatedCount
         });
         saveGeneratedCount();
         updateScoreDisplay();
@@ -100,6 +106,8 @@ window.addEventListener('DOMContentLoaded', function () {
    
 });
 
+//finder ud af hvilken html-side du er på
+//hvis du er på 'game1-food.html, eksikveres "resetPointSystem()"
 const urhere = window.location.pathname;
     const pageName = urhere.substring(urhere.lastIndexOf('/') + 1);
 
