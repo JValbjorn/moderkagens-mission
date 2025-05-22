@@ -41,7 +41,6 @@ body {
 
 a, button {
   font-family: 'SourceCodeVariable'; 
-  src: url('../media/fonts/source-codevariable.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   text-decoration: none;

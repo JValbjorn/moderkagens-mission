@@ -6,16 +6,20 @@ let wasteProcent = 0;
 let virusProcent = 0;
 
 
-//De fire ...Lom'er leder efter korresponderende type i scoreArray
-//bagefter
+//De fire ...Lom'er leder efter korresponderende object-type i scoreArray
+//bagefter reduces object'et til en enkelt værdi, som vi vælger skal være værdien fra 'quantity'
 function goodLom(){
     let gf = scoreArray.filter(produkt =>produkt.type.includes("good"));
     let gftal = gf.reduce((sum, ele) => sum + ele.quantity, 0);
 
+//her leder arrayet 'generatedCount'(ikke object-array) efter en 'key' med korresponderende navn   
+//bagefter hentes dens værdi (den har kun én)
     let gfT = Object.keys(generatedCount)
         .filter(key => key === "good")
         .reduce((sum, key) => sum + generatedCount[key], 0);
 
+
+//finder procent og kalder på progressions-cirkel-funktionen og påvirker den med 'type=good'
      gfProcent = gftal / gfT *100;
     console.log(gfProcent);
     updateCircularProgress("good", gfProcent);
@@ -75,38 +79,44 @@ function virusLom(){
 //      const classicSum = classicProdukter.reduce((sum, ele) => sum + ele.total, 0);
 //      document.getElementById("classicSum").value = classicSum;
 
+//Først findes cirklen hvis type har aktiveret funktionen "good, waste og virus"
+//if-statements stopper hele processen, hvis '!...' ("fandt ikke") opstår
 
 function updateCircularProgress(type, procent) {
     const wrapper = document.querySelector(`.circle-progress[data-type="${type}"]`);
     if (!wrapper) return;
 
+    //circle (aka .progress) er selve den visuelle cirkel
+    //text (aka .percentage) er procenttallet, der skal vises inde i cirklen
     const circle = wrapper.querySelector(".progress");
     const text = wrapper.querySelector(".percentage");
 
     if (!circle || !text) return;
 
+    //udregning for hvor "hel" progressionen
     procent = Math.min(100, Math.max(0, procent));
 
-    const radius = 15.9155; // svarer til din path-radius
-    const circumference = 2 * Math.PI * radius;
+    const radius = 15.9155; // et tal som vi bestemmer. Afgører hvor stor cirklen er per default. Svarer til "<path> d=...</path>
+    const circumference = 2 * Math.PI * radius; //ligningen for en hel cirkel
 
-    const offset = circumference * (1 - procent / 100);
+    const offset = circumference * (1 - procent / 100); //lignen for den farvede del
 
-    circle.style.strokeDasharray = `${circumference}`;
-    circle.style.strokeDashoffset = `${offset}`;
+    circle.style.strokeDasharray = `${circumference}`; //tegner ringen via svg-egenskaber
+    circle.style.strokeDashoffset = `${offset}`; //tegner progrssionen via svg-egenskaber
 
-    text.textContent = `${Math.round(procent)}%`;
+    text.textContent = `${Math.round(procent)}%`; //udskriver procenttallet
 }
 
 
+// Redundant kode. Ført over stil scores.js
+//
+// window.addEventListener('DOMContentLoaded', function () {
+//     loadPointsFromLocalStorage();
+//     loadGeneratedCount();
 
-window.addEventListener('DOMContentLoaded', function () {
-    loadPointsFromLocalStorage();
-    loadGeneratedCount();
-
-    // Opdater cirkler direkte baseret på localStorage
-    goodLom();
-    wasteLom();
-    virusLom();
-});
+//     // Opdater cirkler direkte baseret på localStorage
+//     goodLom();
+//     wasteLom();
+//     virusLom();
+// });
 

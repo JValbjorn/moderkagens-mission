@@ -2,11 +2,11 @@
 
 
 // sørger for html'en er indlæst før funktionerne inden i kaldes
-
+//henter de to local storages
 window.addEventListener('DOMContentLoaded', function () {
    loadPointsFromLocalStorage();
     loadGeneratedCount();
-//henter de to local storages
+
 
 
 //aktivere de fire funktioner, der beregner procenttallet

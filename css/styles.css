@@ -71,6 +71,7 @@ a {
     padding: 0.7rem;
     min-width: 8rem;
    column-gap: 3rem;
+    justify-content: center;
     text-align: center;
 }
 
