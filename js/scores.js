@@ -102,7 +102,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     // Opdater cirkler direkte baseret på localStorage
     goodLom();
-    badLom();
     wasteLom();
+    virusLom();
 });
 

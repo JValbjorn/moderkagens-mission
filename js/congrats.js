@@ -1,8 +1,7 @@
 "use strict";
 
 
-// let samletScore = gfProcent + bfProcent + wasteProcent;
-// console.log(samletScore);
+// 
 
 window.addEventListener('DOMContentLoaded', function () {
    loadPointsFromLocalStorage();
