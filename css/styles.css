@@ -40,7 +40,7 @@ a {
 
 .confirm-home {
  background-color: #fff;
- z-index: 1001;
+ z-index: 1300;
    width: 30rem;
     height: 15rem;
     position: absolute;
@@ -64,8 +64,9 @@ a {
     padding: 0.7rem;
     min-width: 8rem;
    column-gap: 3rem;
-
+padding: 10px;
     text-align: center;
+    justify-content: center;
 }
 
 .b2home-btn {
