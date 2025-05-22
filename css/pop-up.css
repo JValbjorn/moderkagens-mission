@@ -30,14 +30,16 @@
   }
 
 .close {
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    background-color: #29abe2; 
-    border-radius: 23px;
-    padding: 0.7rem;
-    max-width: 15rem;
-    margin-left: 31%;
+     color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #29abe2; 
+  border-radius: 23px;
+  padding: 0.7rem;
+  max-width: 15rem;
+  position: relative; /* eller absolute, afhængigt af dit layout */
+  left: 22.5%;
+  transform: translateX(-50%);
   } 
 
   .close-box {
