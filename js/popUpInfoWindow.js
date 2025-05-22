@@ -4,20 +4,17 @@ const popUp = document.getElementById("pop-up");
 const span = document.getElementById("close");
 let stage = 1;
 
+// Event listener åbner pop-up vinduet når DOM/siden er indlæst
 window.addEventListener("DOMContentLoaded", () => {
     popUp.style.display = "block";
 });
 
-// window.onclick = (event) => {
-//     if (event.target === popUp) {
-//         startGame();
-//     }
-// };
-
+//sørger for at spilfunktioner begynner når man trykker start
 span.onclick = () => {
     startGame();
 };
 
+//denne funktion starter spillet, timer, lukker pop-up vinduet og tæller stage
 function startGame() {
     popUp.style.display = "none";
     stage = +popUp.dataset.stage

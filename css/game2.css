@@ -1,5 +1,5 @@
 .waste-container {
-    position: relative;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -13,11 +13,10 @@
   pointer-events: auto;
   animation: upDown 2.5s ease-in-out infinite;
   z-index: 200;
+
    /* Fade-in effect when it appears */
   opacity: 0;
   animation: fadeIn 1.5s ease forwards, upDown 2.5s ease-in-out infinite;
-
-  
 } 
 
 
