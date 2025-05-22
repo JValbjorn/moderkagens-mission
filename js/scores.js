@@ -25,14 +25,7 @@ function goodLom(){
     updateCircularProgress("good", gfProcent);
 
 }
-// function goodLom(){
-//     let gf = scoreArray.filter(produkt => produkt.type.includes("good"));
-//     let gftal = gf.reduce((sum, ele) => sum + ele.quantity, 0);
-//     let gfT = Object.keys(generatedCount).filter(key => key === "good").reduce((sum, key) => sum + generatedCount[key], 0);
-//     gfProcent = gftal / gfT * 100;
-//     console.log(gfProcent);
-//     updateCircularProgress("good", gfProcent);
-// }
+
 
 function badLom(){
     let bf = scoreArray.filter(produkt =>produkt.type.includes("bad"));
@@ -75,9 +68,7 @@ function virusLom(){
 
 }
 
-// const classicProdukter = cart.filter(produkt =>produkt.type.includes("classic"));
-//      const classicSum = classicProdukter.reduce((sum, ele) => sum + ele.total, 0);
-//      document.getElementById("classicSum").value = classicSum;
+
 
 //Først findes cirklen hvis type har aktiveret funktionen "good, waste og virus"
 //if-statements stopper hele processen, hvis '!...' ("fandt ikke") opstår
